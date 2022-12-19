@@ -1,0 +1,91 @@
+<div class="my-container">
+  <h1><%= @league.name %></h1>
+  <div class="league-container">
+    <div class="classification">
+      <div class="classification-header">
+        <div class="column-1">
+          <p></p>
+        </div>
+        <div class="column-2">
+          <p></p>
+        </div>
+        <div class="column-3">
+          <p>pts</p>
+        </div>
+        <div class="column-1">
+          <p>J.</p>
+        </div>
+        <div class="column-1">
+          <p>G.</p>
+        </div>
+        <div class="column-1">
+          <p>N.</p>
+        </div>
+        <div class="column-1">
+          <p>P.</p>
+        </div>
+        <div class="column-1">
+          <p>b.p.</p>
+        </div>
+        <div class="column-1">
+          <p>b.c.</p>
+        </div>
+        <div class="column-1">
+          <p>diff.</p>
+        </div>
+      </div>
+      <% @teams.each_with_index do |team, index| %>
+        <div class="classification-row">
+          <div class="column-1">
+            <p><%= index + 1 %></p>
+          </div>
+          <div class="column-2">
+            <p><strong><%= team.name %></strong></p>
+          </div>
+          <div class="column-3">
+            <p><strong><%= team.points %></strong></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.victories + team.defeats + team.draws %></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.victories %></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.draws %></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.defeats %></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.goals_for %></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.goals_against %></p>
+          </div>
+          <div class="column-1">
+            <p><%= team.goals_for - team.goals_against %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="matches-part">
+      <div class="next-matches-part">
+        <h2>Prochains matches</h2>
+        <div class="next-matches">
+          <% @nextmatches.each do |nextmatch| %>
+            <%= render "shared/nextmatch-card", nextmatch: nextmatch %>
+          <% end %>
+        </div>
+      </div>
+      <div class="all-matchweeks">
+        <h2>Matches par journée</h2>
+        <div class="matchweeks">
+          <% @matchweeks.each do |matchweek| %>
+            <%= render "shared/matchweek-card", matchweek: matchweek %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

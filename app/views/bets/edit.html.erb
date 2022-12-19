@@ -1,0 +1,10 @@
+<div class="my-container">
+  <h1>This is the edit bet page</h1>
+  <div class="new-bet-card">
+  <%  %>
+    <%= form_with model: [:match, @bet] do |form| %>
+      <%= form.text_field :prono %>
+      <%= form.submit "GO" %>
+    <% end %>
+  </div>
+</div>

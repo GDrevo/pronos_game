@@ -1,0 +1,43 @@
+<% if match.played? %>
+  <div class="matchweek-matchcard">
+      <div class="matchweek-matchcard-top">
+        <%= cl_image_tag Team.find(match.team_home_id).photo.key, height: 48, width: 36, crop: :fit %>
+        <%= cl_image_tag Team.find(match.team_away_id).photo.key, height: 48, width: 36, crop: :fit %>
+      </div>
+      <div class="matchweek-matchcard-bottom">
+        <div class="bottom-score">
+          <% if match.result[0] > match.result[2] %>
+            <h4><%= match.result[0] %></h4>
+            <h4>-</h4>
+            <p><%= match.result[2] %></p>
+          <% elsif match.result[0] < match.result[2] %>
+            <p><%= match.result[0] %></p>
+            <h4>-</h4>
+            <h4><%= match.result[2] %></h4>
+          <% else %>
+            <p><%= match.result[0] %></p>
+            <h4>-</h4>
+            <p><%= match.result[2] %></p>
+          <% end %>
+        </div>
+        <p><%= match.date.strftime('%A').chars.first(3).join %> <%= match.date.day %>/<%= match.date.month %></p>
+      </div>
+    </div>
+<% else %>
+  <%= link_to new_or_edit_match_bet_path(match) do %>
+    <div class="matchweek-matchcard">
+      <div class="matchweek-matchcard-top">
+        <%= cl_image_tag Team.find(match.team_home_id).photo.key, height: 48, width: 36, crop: :fit %>
+        <%= cl_image_tag Team.find(match.team_away_id).photo.key, height: 48, width: 36, crop: :fit %>
+      </div>
+      <div class="matchweek-matchcard-bottom">
+        <div class="bottom-score">
+          <h4>?</h4>
+          <h4>-</h4>
+          <h4>?</h4>
+        </div>
+        <p><%= match.date.strftime('%A').chars.first(3).join %> <%= match.date.day %>/<%= match.date.month %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
