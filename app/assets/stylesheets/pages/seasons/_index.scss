@@ -1,0 +1,21 @@
+.season-cards {
+  padding-top: 12vh;
+ }
+
+ .season-card {
+   background-color: $black;
+   width: 33%;
+   margin: 0 auto;
+   text-align: center;
+   border: 1px solid $light-gray;
+   border-radius: 6px;
+   a {
+     color: $light-gray;
+   }
+   a:hover {
+     color: $white;
+   }
+   h2 {
+     margin: 0;
+   }
+ }

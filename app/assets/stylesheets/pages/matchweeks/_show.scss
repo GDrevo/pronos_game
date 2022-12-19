@@ -1,0 +1,119 @@
+h1 {
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.matchweek-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headers-buttons {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-button {
+  width: 60px;
+  background-color: $black;
+  border-radius: 6px;
+  a {
+    color: $white;
+  }
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    margin: 0;
+  }
+}
+
+.next-button {
+  width: 60px;
+  background-color: $black;
+  border-radius: 6px;
+  a {
+    color: $white;
+  }
+}
+
+.next-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    margin: 0;
+  }
+}
+
+.matchweek-matches {
+  background-color: $black;
+  border-radius: 6px;
+}
+
+.matchweek-matchcards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 808px;
+  width: 100%;
+  // border-radius: 6px;
+}
+
+.matchweek-matchcard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 24px;
+  h4 {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+.matchweek-matchcard-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 24px;
+  p {
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+  }
+}
+
+.matchweek-matchcard {
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: $black;
+  color: $white;
+  border-radius: 6px;
+  border: 1px solid $dark-gray;
+  margin: 12px;
+}
+
+.bottom-score {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,154 @@
+.my-container {
+  h1 {
+    color: $white;
+    margin-top: 12px;
+  }
+}
+
+.league-container {
+  height: 808px;
+  display: flex;
+  gap: 6px;
+}
+
+.classification {
+  width: 50%;
+  height: 100%;
+  background-color: $black;
+  color: $white;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.classification-header {
+  display: flex;
+}
+
+.classification-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px dotted $gray;
+}
+
+.column-1 {
+  width: 5%;
+  p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+}
+
+.column-2 {
+  width: 50%;
+  p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+}
+
+.column-3 {
+  width: 10%;
+  p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+}
+
+.matches-part {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.next-matches-part {
+  height: 50%;
+  background-color: $black;
+  color: $white;
+  padding: 12px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.next-matches {
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $dark-gray;
+  a {
+    width: 19%;
+    height: 40%;
+    border: 1px solid $dark-gray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.all-matchweeks {
+  height: 50%;
+  background-color: $black;
+  color: $white;
+  padding: 12px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  h2 {
+    margin-bottom: 48px;
+  }
+}
+
+.nextmatch-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+.nextmatch-card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+}
+
+.nextmatch-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.matchweeks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.matchweek-card {
+  width: 9%;
+  border: 1px solid $dark-gray;
+  border-radius: 6px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+  p {
+    margin: 0;
+  }
+}

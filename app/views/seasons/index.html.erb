@@ -1,0 +1,11 @@
+<div class="my-container">
+  <div class="season-cards">
+    <% @seasons.each do |season| %>
+      <div class="season-card">
+        <%= link_to season_path(season) do %>
+          <h2>Saison <%= season.name %></h2>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

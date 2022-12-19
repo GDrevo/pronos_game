@@ -1,0 +1,24 @@
+<div class="my-container">
+  <div class="matchweek-header">
+    <h1>Journée <%= @matchweek.number %></h1>
+    <div class="headers-buttons">
+      <div class="back-button">
+        <%= link_to @matchweek.previous, class: "back-link" do %>
+          <h2><</h2>
+        <% end %>
+      </div>
+      <div class="next-button">
+        <%= link_to @matchweek.next, class: "next-link" do %>
+          <h2>></h2>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="matchweek-matches">
+    <div class="matchweek-matchcards">
+      <% @matches.each do |match| %>
+          <%= render "shared/matchweek-matchcard", match: match %>
+      <% end %>
+    </div>
+  </div>
+</div>
