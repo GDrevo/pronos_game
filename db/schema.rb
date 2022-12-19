@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_19_155953) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_19_161437) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_155953) do
     t.datetime "updated_at", null: false
     t.index ["match_id"], name: "index_bets_on_match_id"
     t.index ["user_id"], name: "index_bets_on_user_id"
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "friend_id"
+    t.boolean "confirmed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_invitations_on_user_id"
   end
 
   create_table "leagues", force: :cascade do |t|
@@ -124,6 +133,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_155953) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bets", "matches"
   add_foreign_key "bets", "users"
+  add_foreign_key "invitations", "users"
   add_foreign_key "leagues", "seasons"
   add_foreign_key "matches", "matchweeks"
   add_foreign_key "matches", "teams", column: "team_away_id"

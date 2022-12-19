@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <div class="menu">
+      <div class="menu-link">
+        <h2><%= link_to "SAISONS", seasons_path %></h2>
+      </div>
+      <div class="menu-link">
+        <h2><%= link_to "STATISTIQUES", user_path(1) %></h2>
+      </div>
+      <div class="menu-link">
+        <h2><a href="https://www.lequipe.fr/Football/ligue-1/page-classement-individuel/buteurs" target="blank">BUTEURS LIGUE 1</a></h2>
+      </div>
+    </div>
+  </div>
+</div>
