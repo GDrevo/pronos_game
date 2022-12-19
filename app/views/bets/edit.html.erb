@@ -1,10 +1,22 @@
 <div class="my-container">
-  <h1>This is the edit bet page</h1>
-  <div class="new-bet-card">
-  <%  %>
-    <%= form_with model: [:match, @bet] do |form| %>
-      <%= form.text_field :prono %>
-      <%= form.submit "GO" %>
-    <% end %>
-  </div>
+  <% if current_user.admin? %>
+    <h1>This is the edit bet page</h1>
+    <div class="new-bet-card">
+    <%  %>
+      <%= form_with model: [:match, @bet] do |form| %>
+        <%= form.text_field :prono %>
+        <%= form.text_field :result %>
+        <%= form.submit "GO" %>
+      <% end %>
+    </div>
+  <% else %>
+    <h1>This is the edit bet page</h1>
+    <div class="new-bet-card">
+      <%  %>
+      <%= form_with model: [:match, @bet] do |form| %>
+        <%= form.text_field :prono %>
+        <%= form.submit "GO" %>
+      <% end %>
+    </div>
+  <% end %>
 </div>

@@ -15,7 +15,7 @@ Season.destroy_all
 User.destroy_all
 
 puts "Creating two players Guillaume and Bernard..."
-gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com')
+gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', admin: true)
 ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com')
 puts ">> Players gui and ber created !"
 
@@ -665,3 +665,48 @@ Match.create(team_home_id: paris.id, team_away_id: clermont.id, matchweek: mw38,
 Match.create(team_home_id: brest.id, team_away_id: rennes.id, matchweek: mw38, date: Date.new(2023,6,3))
 Match.create(team_home_id: reims.id, team_away_id: montpellier.id, matchweek: mw38, date: Date.new(2023,6,3))
 Match.create(team_home_id: troyes.id, team_away_id: lille.id, matchweek: mw38, date: Date.new(2023,6,3))
+
+puts "Calculating Teams ranking"
+
+paris.calculate_score
+paris.save!
+lens.calculate_score
+lens.save!
+rennes.calculate_score
+rennes.save!
+marseille.calculate_score
+marseille.save!
+lorient.calculate_score
+lorient.save!
+monaco.calculate_score
+monaco.save!
+lille.calculate_score
+lille.save!
+lyon.calculate_score
+lyon.save!
+nice.calculate_score
+nice.save!
+clermont.calculate_score
+clermont.save!
+reims.calculate_score
+reims.save!
+toulouse.calculate_score
+toulouse.save!
+troyes.calculate_score
+troyes.save!
+montpellier.calculate_score
+montpellier.save!
+nantes.calculate_score
+nantes.save!
+brest.calculate_score
+brest.save!
+auxerre.calculate_score
+auxerre.save!
+ajaccio.calculate_score
+ajaccio.save!
+strasbourg.calculate_score
+strasbourg.save!
+angers.calculate_score
+angers.save!
+
+puts ">> Team ranking calculated !"

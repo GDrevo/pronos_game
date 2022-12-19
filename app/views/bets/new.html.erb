@@ -1,10 +1,31 @@
 <div class="my-container">
-  <h1>This is the new bet page</h1>
-  <div class="new-bet-card">
-  <%  %>
-    <%= form_with model: [:match, @bet] do |form| %>
-      <%= form.text_field :prono %>
-      <%= form.submit "GO" %>
+  <div class="bet-container">
+    <div class="bet-team">
+      <%= cl_image_tag @match.team_home.photo.key, height: 96, width: 72, crop: :fit %>
+      <% raise %>
+    </div>
+
+    <% if current_user.admin? %>
+      <div class="new-bet-card">
+        <%= form_with model: [:match, @bet] do |form| %>
+          <%= form.label :prono, 'Prono', class: "bet-form-title" %>
+          <%= form.text_field :prono, class: "bet-form-input" %>
+          <%= form.label :result, 'Result', class: "bet-form-title" %>
+          <%= form.text_field :result, class: "bet-form-input" %>
+          <%= form.submit "GO", class: "bet-form-submit" %>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="new-bet-card">
+        <%= form_with model: [:match, @bet] do |form| %>
+          <%= form.text_field :prono %>
+          <%= form.submit "GO" %>
+        <% end %>
+      </div>
     <% end %>
+
+    <div class="bet-team">
+      <%= cl_image_tag @match.team_away.photo.key, height: 96, width: 72, crop: :fit %>
+    </div>
   </div>
 </div>

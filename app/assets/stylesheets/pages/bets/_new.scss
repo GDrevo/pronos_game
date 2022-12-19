@@ -1,0 +1,37 @@
+.bet-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 48px;
+}
+
+.new-bet-card {
+  width: 33%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $black;
+  border-radius: 6px;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.bet-form-title {
+  font-family: $headers-font;
+  color: $white;
+  font-size: 48px;
+}
+
+.bet-form-input {
+  width: 50%;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.bet-form-submit {
+  background-color: $white;
+  border-width: 0;
+  border-radius: 6px;
+}
