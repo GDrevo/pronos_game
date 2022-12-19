@@ -10,9 +10,73 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_19_150016) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_19_151816) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bets", force: :cascade do |t|
+    t.string "prono"
+    t.integer "score", default: 0
+    t.bigint "match_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["match_id"], name: "index_bets_on_match_id"
+    t.index ["user_id"], name: "index_bets_on_user_id"
+  end
+
+  create_table "leagues", force: :cascade do |t|
+    t.string "name"
+    t.bigint "season_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["season_id"], name: "index_leagues_on_season_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.string "result"
+    t.date "date"
+    t.boolean "played", default: false
+    t.bigint "team_home_id", null: false
+    t.bigint "team_away_id", null: false
+    t.bigint "matchweek_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["matchweek_id"], name: "index_matches_on_matchweek_id"
+    t.index ["team_away_id"], name: "index_matches_on_team_away_id"
+    t.index ["team_home_id"], name: "index_matches_on_team_home_id"
+  end
+
+  create_table "matchweeks", force: :cascade do |t|
+    t.integer "number"
+    t.bigint "league_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["league_id"], name: "index_matchweeks_on_league_id"
+  end
+
+  create_table "seasons", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.integer "points", default: 0
+    t.integer "victories", default: 0
+    t.integer "defeats", default: 0
+    t.integer "draws", default: 0
+    t.integer "games_played", default: 0
+    t.integer "goals_for", default: 0
+    t.integer "goals_against", default: 0
+    t.integer "goal_average", default: 0
+    t.integer "clean_sheets", default: 0
+    t.bigint "league_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["league_id"], name: "index_teams_on_league_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +86,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_150016) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.integer "total_score", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bets", "matches"
+  add_foreign_key "bets", "users"
+  add_foreign_key "leagues", "seasons"
+  add_foreign_key "matches", "matchweeks"
+  add_foreign_key "matches", "teams", column: "team_away_id"
+  add_foreign_key "matches", "teams", column: "team_home_id"
+  add_foreign_key "matchweeks", "leagues"
+  add_foreign_key "teams", "leagues"
 end
