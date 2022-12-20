@@ -45,11 +45,15 @@ class BetsController < ApplicationController
   def update
     @bet = Bet.find(params[:match_id])
     @bet.prono = bet_params[:prono]
-    @bet.match.calculate_result(bet_params[:result])
-    raise
+    @bet.result = bet_params[:result]
     match = Match.find(@bet.match_id)
+    match.result = @bet.result
+    match.played = true if match.result?
+    match.save
     team = Team.find(match.team_home_id)
     team.calculate_score
+    @bet.result = @bet.compute_score
+    raise
     league = League.find(team.league_id)
     @bet.save
     redirect_to league_path(league)
@@ -58,6 +62,6 @@ class BetsController < ApplicationController
   private
 
   def bet_params
-    params.require(:bet).permit(:prono, :result)
+    params.require(:bet).permit(:prono, :result, :match_id)
   end
 end
