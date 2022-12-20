@@ -1,0 +1,104 @@
+.bet-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bet-team {
+  width: 30%;
+  height: 300px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  justify-content: flex-end;
+  h3 {
+    margin-top: 12px;
+  }
+}
+
+.last-five-matches {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.last-five-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  background: $black-linear;
+  color: $white;
+  padding-top: 12px;
+  border-radius: 6px;
+}
+
+.last-five-card-top {
+  display: flex;
+  align-items: center;
+  h4 {
+    margin: 0;
+  }
+}
+
+.last-five-dates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.last-five-dates-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  color: $white;
+}
+
+.last-five-dates-card-bottom {
+  text-align: center;
+}
+
+.new-bet-card {
+  width: 30%;
+  min-height: 300px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: $black-linear;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.bet-form-title {
+  font-family: $headers-font;
+  color: $white;
+  font-size: 48px;
+}
+
+.bet-form-input {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.bet-form-submit {
+  background-color: $white;
+  border-width: 0;
+  border-radius: 6px;
+}

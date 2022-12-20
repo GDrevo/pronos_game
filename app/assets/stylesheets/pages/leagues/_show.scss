@@ -14,7 +14,7 @@
 .classification {
   width: 50%;
   height: 100%;
-  background-color: $black;
+  background: $black-linear;
   color: $white;
   padding: 12px;
   border-radius: 6px;
@@ -63,7 +63,7 @@
 
 .next-matches-part {
   height: 50%;
-  background-color: $black;
+  background: $black-linear;
   color: $white;
   padding: 12px;
   border-top-left-radius: 6px;
@@ -91,7 +91,7 @@
 
 .all-matchweeks {
   height: 50%;
-  background-color: $black;
+  background: $black-linear;
   color: $white;
   padding: 12px;
   border-bottom-left-radius: 6px;
@@ -128,7 +128,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .matchweeks {
@@ -144,6 +143,7 @@
   border: 1px solid $dark-gray;
   border-radius: 6px;
   text-align: center;
+  background: $black-linear;
   a {
     text-decoration: none;
     color: $white;
