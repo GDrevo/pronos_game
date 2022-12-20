@@ -14,10 +14,20 @@ League.destroy_all
 Season.destroy_all
 User.destroy_all
 
-puts "Creating two players Guillaume and Bernard..."
-gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', admin: true)
-ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com')
-puts ">> Players gui and ber created !"
+puts "Creating 11 Players..."
+gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', username:"Guillaume", admin: true)
+roger = User.create(email: 'roger@roger.com', password: 'roger@roger.com', username: "Roger")
+john = User.create(email: 'john@john.com', password: 'john@john.com', username: "John")
+marcel = User.create(email: 'marcel@marcel.com', password: 'marcel@marcel.com', username: "Marcel")
+julie = User.create(email: 'julie@julie.com', password: 'julie@julie.com', username: "Julie")
+jane = User.create(email: 'jane@jane.com', password: 'jane@jane.com', username: "Jane")
+mary = User.create(email: 'mary@mary.com', password: 'mary@mary.com', username: "Mary")
+tim = User.create(email: 'tim@tim.com', password: 'tim@tim.com', username: "Tim")
+pierre = User.create(email: 'pierre@pierre.com', password: 'pierre@pierre.com', username: "Pierre")
+theo = User.create(email: 'theo@theo.com', password: 'theo@theo.com', username: "Théo")
+max = User.create(email: 'max@max.com', password: 'max@max.com', username: "Max")
+
+puts ">> 11 Players created !"
 
 puts "Creating friendship between gui and ber..."
 Invitation.create(user: gui, friend_id: ber.id, confirmed: true)

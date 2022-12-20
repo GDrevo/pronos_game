@@ -1,0 +1,22 @@
+<div class="my-container">
+  <div class="friends-up">
+    <div class="friends-up-search">
+      <%= form_with url: user_invitations_path, method: :get, class: "friends-searchbar" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "friends-input",
+          placeholder: "Rechercher des amis"
+        %>
+        <%= image_submit_tag("search.png", class: "friends-submit", id: "input-searchbar")  %>
+      <% end %>
+    </div>
+    <div class="friends-up-list">
+      <% @users.each do |user| %>
+        <%= render "friend-card", user: user %>
+      <% end %>
+    </div>
+  </div>
+  <div class="friends-down">
+
+  </div>
+</div>

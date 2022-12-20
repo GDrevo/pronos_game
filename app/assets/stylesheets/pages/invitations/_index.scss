@@ -1,0 +1,40 @@
+.friends-up {
+  height: 40vh;
+  width: 100%;
+  background: $black-linear;
+  margin-top: 48px;
+  border-radius: 6px;
+  color: $white;
+}
+
+.friends-up-search {
+  height: 25%;
+  border-bottom: 1px solid $dark-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friends-searchbar {
+  display: flex;
+}
+
+.friends-input {
+  width: 600px;
+  height: 48px;
+  padding-left: 12px;
+  background-color: $white;
+  border: 1px solid $dark-gray;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.friends-submit {
+  width: 48px;
+  height: 33%;
+  background-color: $white;
+  padding: 6px;
+  border: 1px solid $dark-gray;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
