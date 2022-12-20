@@ -9,15 +9,7 @@ class Bet < ApplicationRecord
     @prono_vdn = calculate_prono
     @result_vdn = calculate_result
     calculate_bet_score
-    all_bets = Bet.where(match: match)
-    user.total_score = 0
-    user.save
-    raise
-    all_bets.each do |bet|
-      bet.user.total_score += bet.score
-      bet.user.save!
-    end
-    save
+    save!
   end
 
   private
