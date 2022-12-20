@@ -2,7 +2,30 @@
   <div class="bet-container">
     <div class="bet-team">
       <%= cl_image_tag @match.team_home.photo.key, height: 96, width: 72, crop: :fit %>
-      <% raise %>
+      <h3>5 DERNIERS MATCHES</h3>
+      <div class="last-five-matches">
+        <% @matches_home.each do |match| %>
+          <div class="last-five-card">
+            <div class="last-five-card-top">
+              <%= cl_image_tag Team.find(match.team_home_id).photo.key, height: 24, width: 18, crop: :fit %>
+              <h4>-</h4>
+              <%= cl_image_tag Team.find(match.team_away_id).photo.key, height: 24, width: 18, crop: :fit %>
+            </div>
+            <div class="last-five-card-bottom">
+              <h4><%= match.result %></h4>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="last-five-dates">
+        <% @matches_home.each do |match| %>
+          <div class="last-five-dates-card">
+            <div class="last-five-dates-card-bottom">
+              <p><%= match.date.day %>/<%= match.date.month %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
 
     <% if current_user.admin? %>
@@ -18,14 +41,39 @@
     <% else %>
       <div class="new-bet-card">
         <%= form_with model: [:match, @bet] do |form| %>
-          <%= form.text_field :prono %>
-          <%= form.submit "GO" %>
+          <%= form.label :prono, 'Prono', class: "bet-form-title" %>
+          <%= form.text_field :prono, class: "bet-form-input" %>
+          <%= form.submit "GO", class: "bet-form-submit" %>
         <% end %>
       </div>
     <% end %>
 
     <div class="bet-team">
       <%= cl_image_tag @match.team_away.photo.key, height: 96, width: 72, crop: :fit %>
+      <h3>5 DERNIERS MATCHES</h3>
+      <div class="last-five-matches">
+        <% @matches_away.each do |match| %>
+          <div class="last-five-card">
+            <div class="last-five-card-top">
+              <%= cl_image_tag Team.find(match.team_home_id).photo.key, height: 24, width: 18, crop: :fit %>
+              <h4>-</h4>
+              <%= cl_image_tag Team.find(match.team_away_id).photo.key, height: 24, width: 18, crop: :fit %>
+            </div>
+            <div class="last-five-card-bottom">
+              <h4><%= match.result %></h4>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="last-five-dates">
+        <% @matches_away.each do |match| %>
+          <div class="last-five-dates-card">
+            <div class="last-five-dates-card-bottom">
+              <p><%= match.date.day %>/<%= match.date.month %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
