@@ -25,6 +25,16 @@ class User < ApplicationRecord
   end
 
   def calculate_total_score
-    self.total_score += bets.last.score
+    self.total_score = 0
+    all_bets = bets
+    all_bets.each do |bet|
+      self.total_score += bet.score
+    end
+    save
+    # bet = bets.where(match_id: admin_bet.match_id).last
+    # bet.result = admin_bet.result if bet.result.empty?
+    # bet.compute_score
+    # self.total_score += bet.score
+    # save
   end
 end

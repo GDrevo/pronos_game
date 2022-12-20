@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :teams, only: %i[index show]
   resources :matchweeks, only: %i[index show]
   resources :matches, only: %i[index show edit update] do
-    resources :bets, only: %i[new create edit update]
+    resources :bets, only: %i[new create]
   end
 end

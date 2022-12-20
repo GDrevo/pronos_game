@@ -1,0 +1,9 @@
+<div class="my-container">
+  <div class="edit-match-card">
+    <%= form_with model: @match do |form| %>
+      <%= form.label :result, 'Résultat', class: "match-form-title" %>
+      <%= form.text_field :result, class: "match-form-input" %>
+      <%= form.submit "GO", class: "match-form-submit" %>
+    <% end %>
+  </div>
+</div>

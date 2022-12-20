@@ -7,7 +7,6 @@ class Match < ApplicationRecord
   has_one :league, through: :teams
 
   def calculate_result(result)
-
     self.result = result
     self.played = true
     save

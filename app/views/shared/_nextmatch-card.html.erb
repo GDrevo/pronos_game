@@ -1,5 +1,5 @@
 
-<% if current_user.admin? %>
+<% if current_user.admin? && nextmatch.played? == false %>
   <%= link_to new_or_edit_match_bet_path(nextmatch) do %>
     <div class="nextmatch-card">
       <div class="nextmatch-card-top">
