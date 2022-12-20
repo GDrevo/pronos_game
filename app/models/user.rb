@@ -24,7 +24,9 @@ class User < ApplicationRecord
     invitations.create(friend_id: user.id)
   end
 
-  def calculate_total_score
-    self.total_score += bets.last.score
+  def calculate_total_score(admin_bet)
+    bet = admin_bet
+    self.total_score += bet.score
+    save
   end
 end

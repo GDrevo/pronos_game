@@ -19,15 +19,17 @@ class BetsController < ApplicationController
     @bet = Bet.new(bet_params)
     @bet.user = current_user
     @bet.match_id = params[:match_id]
-    @bet.match.result = @bet.result
     @bet.compute_score if @bet.result?
-    @bet.match.played = true if @bet.match.result?
     @bet.save
     match = Match.find(params[:match_id])
+    match.result = @bet.result
+    match.played = true if match.result?
+    match.save
     if @bet.user.admin?
       all_bets = match.bets
       all_bets.each do |bet|
-        bet.user.calculate_total_score
+        bet.user.calculate_total_score(@bet)
+        bet.user.save
       end
     end
     team = Team.find(match.team_home_id)
