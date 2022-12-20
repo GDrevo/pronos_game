@@ -45,6 +45,8 @@ class BetsController < ApplicationController
   def update
     @bet = Bet.find(params[:match_id])
     @bet.prono = bet_params[:prono]
+    @bet.match.calculate_result(bet_params[:result])
+    raise
     match = Match.find(@bet.match_id)
     team = Team.find(match.team_home_id)
     team.calculate_score
@@ -56,6 +58,6 @@ class BetsController < ApplicationController
   private
 
   def bet_params
-    params.require(:bet).permit(:prono)
+    params.require(:bet).permit(:prono, :result)
   end
 end

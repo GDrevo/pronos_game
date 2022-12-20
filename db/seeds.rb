@@ -15,7 +15,8 @@ Season.destroy_all
 User.destroy_all
 
 puts "Creating 11 Players..."
-gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', username:"Guillaume", admin: true)
+gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', username: 'Guillaume', admin: true)
+ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
 roger = User.create(email: 'roger@roger.com', password: 'roger@roger.com', username: "Roger")
 john = User.create(email: 'john@john.com', password: 'john@john.com', username: "John")
 marcel = User.create(email: 'marcel@marcel.com', password: 'marcel@marcel.com', username: "Marcel")
@@ -26,11 +27,23 @@ tim = User.create(email: 'tim@tim.com', password: 'tim@tim.com', username: "Tim"
 pierre = User.create(email: 'pierre@pierre.com', password: 'pierre@pierre.com', username: "Pierre")
 theo = User.create(email: 'theo@theo.com', password: 'theo@theo.com', username: "Théo")
 max = User.create(email: 'max@max.com', password: 'max@max.com', username: "Max")
+antoine = User.create(email: 'antoine@antoine.com', password: 'antoine@antoine.com', username: "Antoine")
 
-puts ">> 11 Players created !"
+puts ">>Antoine Players created !"
 
 puts "Creating friendship between gui and ber..."
 Invitation.create(user: gui, friend_id: ber.id, confirmed: true)
+Invitation.create(user: gui, friend_id: max.id, confirmed: true)
+Invitation.create(user: gui, friend_id: theo.id, confirmed: true)
+Invitation.create(user: gui, friend_id: tim.id, confirmed: true)
+Invitation.create(user: gui, friend_id: mary.id, confirmed: true)
+Invitation.create(user: gui, friend_id: julie.id, confirmed: true)
+Invitation.create(user: gui, friend_id: pierre.id, confirmed: true)
+Invitation.create(user: gui, friend_id: jane.id, confirmed: true)
+Invitation.create(user: gui, friend_id: marcel.id, confirmed: true)
+Invitation.create(user: gui, friend_id: roger.id, confirmed: true)
+Invitation.create(user: gui, friend_id: antoine.id, confirmed: false)
+Invitation.create(user: gui, friend_id: john.id, confirmed: false)
 puts "Guillaume and Bernard are now friends !"
 
 puts "Creating a new Season..."

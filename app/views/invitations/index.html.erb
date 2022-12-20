@@ -16,7 +16,52 @@
       <% end %>
     </div>
   </div>
-  <div class="friends-down">
-
+  <div class="friends-down-container">
+    <div class="friends-down">
+      <div class="friends-down-left">
+        <h2>AMIS</h2>
+        <div class="friends-classification-header">
+            <div class="friends-classification-column-1">
+              <p></p>
+            </div>
+            <div class="friends-classification-column-2">
+              <p></p>
+            </div>
+            <div class="friends-classification-column-3">
+              <p>Pts</p>
+            </div>
+        </div>
+        <div class="friends-classification">
+          <% @friends.each_with_index do |user, index| %>
+            <div class="friends-classification-row">
+              <div class="friends-classification-column-1">
+                <p><%= index + 1 %></p>
+              </div>
+              <div class="friends-classification-column-2">
+                <p><%= user.username %></p>
+              </div>
+              <div class="friends-classification-column-3">
+                <p><%= user.total_score %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="friends-down-right">
+        <h2>INVITATIONS EN ATTENTE</h2>
+        <br>
+        <% @pending_invitations.each do |invitation| %>
+          <div class="invitation-card">
+            <p><%= invitation.friend.username %> vous a envoyé une invitation</p>
+            <%= button_to user_invitation_path(invitation.user, invitation), method: :put, class: "invitation-button" do %>
+              <i class="fa-solid fa-check"></i>
+            <% end %>
+            <%= button_to user_invitation_path(invitation.user, invitation), method: :delete, class: "invitation-button" do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
