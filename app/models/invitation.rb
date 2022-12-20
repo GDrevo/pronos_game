@@ -20,4 +20,8 @@ class Invitation < ApplicationRecord
       Invitation.where(user_id: id1, friend_id: id2, confirmed: true)[0].id
     end
   end
+
+  def friend
+    User.find(friend_id)
+  end
 end

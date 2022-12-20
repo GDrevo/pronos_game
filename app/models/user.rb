@@ -13,7 +13,7 @@ class User < ApplicationRecord
     friends_i_sent_invitation = Invitation.where(user_id: id, confirmed: true).pluck(:friend_id)
     friends_i_got_invitation = Invitation.where(friend_id: id, confirmed: true).pluck(:user_id)
     ids = friends_i_sent_invitation + friends_i_got_invitation
-    User.where(id: ids)
+    User.where(id: ids).or(User.where(id: self.id))
   end
 
   def friend_with?(user)

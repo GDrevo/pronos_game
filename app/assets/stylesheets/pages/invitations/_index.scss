@@ -38,3 +38,132 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+
+.friends-up-list {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  gap: 12px;
+  a {
+    width: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid $dark-gray;
+    border-radius: 6px;
+    color: $light-gray;
+  }
+  a:hover {
+    color: $white;
+  }
+}
+
+.friend-card {
+  text-align: center;
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.friends-down-container {
+  height: 40vh;
+  width: 100%;
+  background: $black-linear;
+  margin-top: 24px;
+  border-radius: 6px;
+  color: $white;
+  padding: 24px;
+  h2 {
+    margin: 0;
+  }
+}
+
+.friends-down {
+  // height: 40vh;
+  // width: 100%;
+  // background: $black-linear;
+  // margin-top: 24px;
+  // border-radius: 6px;
+  // color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.friends-down-left {
+  width: 45%;
+  height: 330px;
+}
+
+.friends-classification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.friends-classification-header {
+  // width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $light-gray;
+}
+
+.friends-classification-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px dotted $gray;
+}
+
+.friends-classification-column-1 {
+  width: 5%;
+  p {
+    margin: 0;
+  }
+}
+
+.friends-classification-column-2 {
+  width: 25%;
+  p {
+    margin: 0;
+  }
+}
+
+.friends-classification-column-3 {
+  width: 70%;
+  p {
+    margin: 0;
+    text-align: end;
+  }
+}
+
+.friends-down-right {
+  width: 45%;
+  height: 330px;
+}
+
+.invitation-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  p {
+    width: 70%;
+  }
+  .invitation-button {
+    border-radius: 6px;
+  }
+}
