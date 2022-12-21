@@ -52,7 +52,7 @@
         <br>
         <% @pending_invitations.each do |invitation| %>
           <div class="invitation-card">
-            <p><%= invitation.friend.username %> vous a envoyé une invitation</p>
+            <p><%= invitation.user.username %> vous a envoyé une invitation</p>
             <%= button_to user_invitation_path(invitation.user, invitation), method: :put, class: "invitation-button" do %>
               <i class="fa-solid fa-check"></i>
             <% end %>

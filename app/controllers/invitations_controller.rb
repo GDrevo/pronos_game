@@ -2,7 +2,7 @@ class InvitationsController < ApplicationController
   def index
     @friends = current_user.friends.sort_by { |friend| -friend.total_score }
     @friends = @friends.first(10)
-    @pending_invitations = Invitation.where(user: current_user, confirmed: false)
+    @pending_invitations = Invitation.where(friend_id: current_user.id, confirmed: false)
     if params[:query].present?
       sql_query = <<~SQL
         users.username ILIKE :query
@@ -14,6 +14,13 @@ class InvitationsController < ApplicationController
     else
       @users = []
     end
+  end
+
+  def create
+    @invitation = Invitation.new(user: current_user)
+    @invitation.friend_id = params[:user_id]
+    @invitation.save
+    redirect_to user_path(@invitation.friend_id)
   end
 
   def update

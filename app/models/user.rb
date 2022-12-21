@@ -21,7 +21,8 @@ class User < ApplicationRecord
   end
 
   def send_invitation(user)
-    invitations.create(friend_id: user.id)
+    Invitation.create(user: current_user, friend_id: user.id)
+    raise
   end
 
   def calculate_total_score
@@ -36,5 +37,36 @@ class User < ApplicationRecord
     # bet.compute_score
     # self.total_score += bet.score
     # save
+  end
+
+  def ranking
+    all_players = User.all.order(total_score: :desc)
+    all_players.pluck(:id).index(id)
+  end
+
+  def invitation_received?(user)
+    all_invitations = Invitation.where(friend_id: self.id)
+    pending_invitations = all_invitations.where(confirmed: false)
+    pending_invitation = pending_invitations.where(user: user)
+    pending_invitation.exists?
+  end
+
+  def invitation_sent?(user)
+    all_invitations = Invitation.where(user: self)
+    pending_invitations = all_invitations.where(confirmed: false)
+    pending_invitation = pending_invitations.where(friend_id: user.id)
+    pending_invitation.exists?
+  end
+
+  def invitation_received(user)
+    all_invitations = Invitation.where(friend_id: self.id)
+    pending_invitations = all_invitations.where(confirmed: false)
+    pending_invitations.where(user: user).last
+  end
+
+  def invitation_sent(user)
+    all_invitations = Invitation.where(user: self)
+    pending_invitations = all_invitations.where(confirmed: false)
+    pending_invitations.where(friend_id: user.id).last
   end
 end
