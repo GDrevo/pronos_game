@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Message.destroy_all
+Participant.destroy_all
+Room.destroy_all
 Bet.destroy_all
 Invitation.destroy_all
 Match.destroy_all

@@ -16,6 +16,24 @@ class InvitationsController < ApplicationController
     end
   end
 
+  def new
+    @invitation = Invitation.new
+    @user = User.find(user_params)
+    @bets = Bet.where(user: @user)
+    @won_bets = @bets.where.not(score: 0)
+    @perfect_bets = @won_bets.where(score: 10)
+    @ranking = @user.ranking + 1
+    raise
+  end
+
+  def show
+    # @user = User.find(params[:id])
+    # @bets = Bet.where(user: @user)
+    # @won_bets = @bets.where.not(score: 0)
+    # @perfect_bets = @won_bets.where(score: 10)
+    # @ranking = @user.ranking + 1
+  end
+
   def create
     @invitation = Invitation.new(user: current_user)
     @invitation.friend_id = params[:user_id]
@@ -34,5 +52,11 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find(params[:id])
     @invitation.delete
     redirect_to user_invitations_path(current_user)
+  end
+
+  private
+
+  def user_params
+    params.require(:user_id)
   end
 end

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
     @current_user = current_user
     @rooms = Room.public_rooms
-    @users = User.all_except(@current_user)
+    @users = @current_user.friends.all_except(@current_user)
     # @room = Room.new
     # @message = Message.new
     # @room_name = get_name(@user, @current_user)
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @current_user = current_user
     @rooms = Room.public_rooms
-    @users = User.all_except(@current_user)
+    @users = @current_user.friends.all_except(@current_user)
     @room = Room.new
     @message = Message.new
     @room_name = get_name(@user, @current_user)
