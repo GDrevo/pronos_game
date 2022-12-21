@@ -15,6 +15,8 @@ class MatchesController < ApplicationController
       bet.save
       bet.user.calculate_total_score
     end
+    match.team_home.calculate_score
+    match.team_away.calculate_score
     league = match.team_home.league
     redirect_to league_path(league)
   end
