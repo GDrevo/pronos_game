@@ -15,6 +15,12 @@ League.destroy_all
 Season.destroy_all
 User.destroy_all
 
+puts "Creating chatrooms..."
+Room.create(name: 'ligue 1', is_private: false)
+Room.create(name: 'Discussions générales', is_private: false)
+Room.create(name: 'Conseils sur les pronos', is_private: false)
+puts ">> 3 public chatrooms created !"
+
 puts "Creating 11 Players..."
 gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', username: 'Guillaume', admin: true)
 ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
