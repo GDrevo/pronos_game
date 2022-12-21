@@ -1,8 +1,8 @@
 <div class="chat-container">
   <div class="row">
     <div class="col-md-2">
-      <h5> Hi <%= @current_user.username %> </h5>
-      <h4> Users </h4>
+      <h5> Bonjour <%= @current_user.username %> </h5>
+      <h4> Amis </h4>
       <div>
         <%= turbo_stream_from "users" %>
         <div id="users">
@@ -10,7 +10,7 @@
         </div>
       </div>
       <h4> Rooms </h4>
-      <%= render partial: "layouts/new_room_form" %>
+      <%#= render partial: "layouts/new_room_form" %>
       <div>
         <%= turbo_stream_from "rooms" %>
         <div id="rooms">
