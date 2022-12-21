@@ -6,7 +6,7 @@
       </div>
       <% unless current_user.nil? %>
         <div class="menu-link">
-          <h2><%= link_to "STATISTIQUES", user_path(current_user) %></h2>
+          <h2><%= link_to "MESSAGERIE", users_path %></h2>
         </div>
         <div class="menu-link">
           <h2><%= link_to "AMIS", user_invitations_path(current_user) %></h2>
