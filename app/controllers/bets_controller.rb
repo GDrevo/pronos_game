@@ -22,9 +22,13 @@ class BetsController < ApplicationController
     @bet.save
     match = Match.find(params[:match_id])
     team = Team.find(match.team_home_id)
-    team.calculate_score
     league = League.find(team.league_id)
-    redirect_to league_path(league)
+    if @bet.save
+      team.calculate_score
+      redirect_to league_path(league)
+    else
+      redirect_to league_path(league), notice: "Erreur de format, ex: '2-2', '2 0'"
+    end
   end
 
   # def edit

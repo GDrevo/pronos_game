@@ -1,7 +1,7 @@
 class Bet < ApplicationRecord
   belongs_to :match
   belongs_to :user
-  validates :prono, presence: true
+  validates :prono, presence: true, format: { with: /\A\d\D\d\z/, message: "format : '2-2', '2 2' ..." }
 
   def compute_score
     prono = self.prono
