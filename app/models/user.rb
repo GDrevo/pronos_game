@@ -5,10 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :bets
   has_many :invitations
+  has_many :messages
   has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "friend_id"
 
   validates :username, uniqueness: true
-
+  scope :all_except, ->(user) { where.not(id: user) }
+  after_create_commit { broadcast_append_to "users" }
   def friends
     friends_i_sent_invitation = Invitation.where(user_id: id, confirmed: true).pluck(:friend_id)
     friends_i_got_invitation = Invitation.where(friend_id: id, confirmed: true).pluck(:user_id)
