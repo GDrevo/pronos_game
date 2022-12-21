@@ -1,0 +1,61 @@
+.user-card-container {
+  margin: 0 auto;
+  width: 33%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-card {
+  width: 100%;
+  background: $black-linear;
+  border-radius: 6px;
+  color: $white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-card-name {
+  width: 100%;
+  margin-bottom: 24px;
+  border-bottom: 1px solid $dark-gray;
+  text-align: center;
+}
+
+.user-card-stats {
+  width: 100%;
+  border-bottom: 1px solid $dark-gray;
+}
+
+.user-card-row {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $dark-gray;
+  p {
+    width: 100%;
+    margin-bottom: 6px;
+    margin-top: 6px;
+  }
+  h3 {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .right-stat-user {
+    text-align: end;
+  }
+}
+
+.user-card-friendship {
+  width: 100%;
+}
+
+.accept-invitation {
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
