@@ -3,19 +3,20 @@
  }
 
  .league-card {
-   background: $black-linear;
-   width: 33%;
-   margin: 0 auto;
-   text-align: center;
-   border: 1px solid $light-gray;
-   border-radius: 6px;
-   a {
-     color: $light-gray;
-   }
-   a:hover {
-     color: $white;
-   }
-   h2 {
-     margin: 0;
-   }
+  background: $yellow;
+  width: 33%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid $black;
+  padding-top: 2px;
+  a {
+    color: $dark-gray;
+  }
+  a:hover {
+    color: $black;
+  }
+  h2 {
+    margin: 0;
+  }
  }

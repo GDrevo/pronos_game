@@ -18,3 +18,17 @@
  .nav-link {
   color: white;
  }
+
+ .dropdown-perso {
+  background-color: $yellow;
+  color: $dark-gray;
+ }
+
+ .dropdown-item-perso:hover {
+  background-color: $yellow;
+  color: $black;
+ }
+
+ .login {
+  color: $yellow;
+ }
