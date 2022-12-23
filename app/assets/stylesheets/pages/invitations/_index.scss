@@ -55,12 +55,13 @@
     justify-content: center;
     padding-top: 12px;
     padding-bottom: 12px;
+    background-color: $yellow;
     border: 1px solid $dark-gray;
     border-radius: 6px;
-    color: $light-gray;
+    color: $dark-gray;
   }
   a:hover {
-    color: $white;
+    color: $black;
   }
 }
 
@@ -84,6 +85,7 @@
   padding: 24px;
   h2 {
     margin: 0;
+    color: $yellow;
   }
 }
 

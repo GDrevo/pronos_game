@@ -1,6 +1,6 @@
 .my-container {
   h1 {
-    color: $white;
+    color: $yellow;
     margin-top: 12px;
   }
 }
@@ -22,12 +22,13 @@
 
 .classification-header {
   display: flex;
+  color: $gray;
 }
 
 .classification-row {
   display: flex;
   width: 100%;
-  border-bottom: 1px dotted $gray;
+  border-bottom: 1px dotted $dark-gray;
 }
 
 .column-1 {
@@ -64,7 +65,7 @@
 .next-matches-part {
   height: 50%;
   background: $black-linear;
-  color: $white;
+  color: $yellow;
   padding: 12px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -92,7 +93,7 @@
 .all-matchweeks {
   height: 50%;
   background: $black-linear;
-  color: $white;
+  color: $yellow;
   padding: 12px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;

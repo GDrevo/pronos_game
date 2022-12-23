@@ -1,0 +1,137 @@
+<div class="my-container">
+  <div class="user-card-container">
+    <% if @user.friend_with?(current_user) %>
+      <div class="user-card">
+          <div class="user-card-name">
+          <h2><%= @user.username %></h2>
+        </div>
+        <div class="user-card-stats">
+          <div class="user-card-row">
+            <p>Membre depuis :</p>
+            <p class="right-stat-user"><%= @user.created_at.month %>/<%= @user.created_at.year %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Nombre de paris :</p>
+            <p class="right-stat-user"><%= @bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Paris gagnants :</p>
+            <p class="right-stat-user"><%= @won_bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Score exact :</p>
+            <p class="right-stat-user"><%= @perfect_bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p><strong>Moyenne :</strong></p>
+            <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+          </div>
+          <div class="user-card-row">
+            <p><strong>Score total :</strong></p>
+            <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+          </div>
+          <div class="user-card-row">
+            <h3>Classement :</h3>
+            <h3 class="right-stat-user"># <%= @ranking %></h3>
+          </div>
+        </div>
+      </div>
+    <% elsif @user == current_user %>
+      <div class="user-card">
+        <div class="user-card-name">
+          <h2><%= @user.username %></h2>
+        </div>
+        <div class="user-card-stats">
+          <div class="user-card-row">
+            <p>Membre depuis :</p>
+            <p class="right-stat-user"><%= @user.created_at.month %>/<%= @user.created_at.year %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Nombre de paris :</p>
+            <p class="right-stat-user"><%= @bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Paris gagnants :</p>
+            <p class="right-stat-user"><%= @won_bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Score exact :</p>
+            <p class="right-stat-user"><%= @perfect_bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p><strong>Moyenne :</strong></p>
+            <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+          </div>
+          <div class="user-card-row">
+            <p><strong>Score total :</strong></p>
+            <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+          </div>
+          <div class="user-card-row">
+            <h3>Classement :</h3>
+            <h3 class="right-stat-user"># <%= @ranking %></h3>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="user-card">
+        <div class="user-card-name">
+          <h2><%= @user.username %></h2>
+        </div>
+        <div class="user-card-stats">
+          <div class="user-card-row">
+            <p>Membre depuis :</p>
+            <p class="right-stat-user"><%= @user.created_at.month %>/<%= @user.created_at.year %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Nombre de paris :</p>
+            <p class="right-stat-user"><%= @bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Paris gagnants :</p>
+            <p class="right-stat-user"><%= @won_bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p>Score exact :</p>
+            <p class="right-stat-user"><%= @perfect_bets.count %></p>
+          </div>
+          <div class="user-card-row">
+            <p><strong>Moyenne :</strong></p>
+            <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+          </div>
+          <div class="user-card-row">
+            <p><strong>Score total :</strong></p>
+            <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+          </div>
+          <div class="user-card-row">
+            <h3>Classement :</h3>
+            <h3 class="right-stat-user"># <%= @ranking %></h3>
+          </div>
+        </div>
+        <div class="user-card-friendship">
+          <% if current_user.invitation_received?(@user) %>
+            <div class="accept-invitation">
+              <p><%= @user.username %> vous a envoyé une demande d'ami.</p>
+              <%= button_to user_invitation_path(@user, @user.invitation_sent(current_user)), method: :put, class: "invitation-button" do %>
+                <i class="fa-solid fa-check"></i>
+              <% end %>
+              <%= button_to user_invitation_path(@user, @user.invitation_sent(current_user)), method: :delete, class: "invitation-button" do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
+            </div>
+          <% elsif current_user.invitation_sent?(@user) %>
+            <div class="accept-invitation">
+              <p>Vous avez envoyé une demande d'ami à <%= @user.username %>.</p>
+            </div>
+          <% else %>
+            <div class="accept-invitation">
+              <p>Ajouter <%= @user.username %> comme ami :</p>
+              <%= button_to user_invitations_path(@user, @user.invitation_sent(current_user)), method: :post, class: "invitation-button" do %>
+                <i class="fa-solid fa-user-plus"></i>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
