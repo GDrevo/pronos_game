@@ -1,7 +1,7 @@
 <div class="chat-container">
-  <div class="row">
-    <div class="col-md-2">
-      <h5> Bonjour <%= @current_user.username %> </h5>
+  <div class="row chat-box-container">
+    <div class="col-md-2 chat-left">
+      <h1> Bonjour <%= @current_user.username %> </h1>
       <h4> Amis </h4>
       <div>
         <%= turbo_stream_from "users" %>
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-10 bg-dark text-light">
+    <div class="col-md-10 text-light chat-right">
       <% if @single_room %>
         <h4 class="text-center"> <%= @user&.username || @single_room.name %> </h4>
         <%= turbo_stream_from @single_room %>

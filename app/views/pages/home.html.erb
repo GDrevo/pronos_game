@@ -2,11 +2,11 @@
   <div class="container">
     <div class="menu">
       <div class="menu-link">
-        <h2><%= link_to "SAISONS", seasons_path %></h2>
+        <h2><%= link_to "PARIER", seasons_path %></h2>
       </div>
       <% unless current_user.nil? %>
         <div class="menu-link">
-          <h2><%= link_to "MESSAGERIE", users_path %></h2>
+          <h2><%= link_to "MES STATS", new_user_invitation_path(current_user) %></h2>
         </div>
         <div class="menu-link">
           <h2><%= link_to "AMIS", user_invitations_path(current_user) %></h2>

@@ -30,7 +30,7 @@
 
       <div class="new-bet-card">
         <%= form_with model: [:match, @bet] do |form| %>
-          <%= form.label :prono, 'Prono', class: "bet-form-title" %>
+          <%= form.label :prono, 'PRONO', class: "bet-form-title" %>
           <%= form.text_field :prono, class: "bet-form-input" %>
           <%= form.submit "GO", class: "bet-form-submit" %>
         <% end %>

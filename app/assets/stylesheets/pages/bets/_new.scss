@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $white;
+  color: $yellow;
   justify-content: flex-end;
   h3 {
     margin-top: 12px;
@@ -87,7 +87,7 @@
 
 .bet-form-title {
   font-family: $headers-font;
-  color: $white;
+  color: $yellow;
   font-size: 48px;
 }
 
@@ -98,7 +98,8 @@
 }
 
 .bet-form-submit {
-  background-color: $white;
+  background-color: $yellow;
+  color: $black;
   border-width: 0;
   border-radius: 6px;
 }

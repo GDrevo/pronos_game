@@ -23,7 +23,7 @@ class InvitationsController < ApplicationController
     @won_bets = @bets.where.not(score: 0)
     @perfect_bets = @won_bets.where(score: 10)
     @ranking = @user.ranking + 1
-    raise
+    # raise
   end
 
   def show
