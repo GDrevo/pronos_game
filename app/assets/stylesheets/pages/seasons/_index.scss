@@ -3,17 +3,18 @@
  }
 
  .season-card {
-   background: $black-linear;
+   background: $yellow;
    width: 33%;
    margin: 0 auto;
    text-align: center;
-   border: 1px solid $light-gray;
    border-radius: 6px;
+   border: 1px solid $black;
+   padding-top: 2px;
    a {
-     color: $light-gray;
+     color: $dark-gray;
    }
    a:hover {
-     color: $white;
+     color: $black;
    }
    h2 {
      margin: 0;

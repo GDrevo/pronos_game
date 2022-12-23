@@ -1,5 +1,5 @@
 <div class="my-container">
-  <h1><%= @league.name %></h1>
+  <h1><%= @league.name.upcase %></h1>
   <div class="league-container">
     <div class="classification">
       <div class="classification-header">
@@ -71,7 +71,7 @@
     </div>
     <div class="matches-part">
       <div class="next-matches-part">
-        <h2>Prochains matches</h2>
+        <h2>PROCHAINS MATCHES</h2>
         <div class="next-matches">
           <% @nextmatches.each do |nextmatch| %>
             <%= render "shared/nextmatch-card", nextmatch: nextmatch %>
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="all-matchweeks">
-        <h2>Matches par journée</h2>
+        <h2><%= ("journées").upcase %></h2>
         <div class="matchweeks">
           <% @matchweeks.each do |matchweek| %>
             <%= render "shared/matchweek-card", matchweek: matchweek %>

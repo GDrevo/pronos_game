@@ -16,6 +16,7 @@
 
 .menu {
   width: 33%;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -46,4 +47,102 @@
 
 p {
   margin: 0;
+}
+
+.home-bottom {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+}
+
+.home-bottom-left {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.home-classement {
+  h2 {
+    text-align: center;
+  }
+}
+
+.classement-users {
+  height: 90%;
+  color: $white;
+  overflow: auto;
+}
+
+.classement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border-bottom: 1px solid $dark-gray;
+  margin-right: 12px;
+}
+
+.classement-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.classement-column-1 {
+  width: 10%;
+}
+
+.classement-column-2 {
+  width: 80%;
+}
+
+.classement-column-3 {
+  width: 10%;
+  text-align: center;
+}
+
+.home-bottom-right {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  h2 {
+    text-align: center;
+  }
+}
+
+.new-user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.new-users-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border-bottom: 1px solid $dark-gray;
+  margin-right: 12px;
+}
+
+.new-users-users {
+  height: 90%;
+  color: $white;
+  overflow: auto;
+}
+
+.new-user-column-1 {
+  width: 25%;
+}
+
+.new-user-column-2 {
+  width: 30%;
+  p {
+    text-align: center;
+  }
 }
