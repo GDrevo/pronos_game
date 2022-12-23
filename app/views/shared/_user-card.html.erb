@@ -1,5 +1,38 @@
 <% if @user.friend_with?(current_user) %>
   <div class="user-card">
+      <div class="user-card-name">
+      <h2><%= @user.username %></h2>
+    </div>
+    <div class="user-card-stats">
+      <div class="user-card-row">
+        <p>Membre depuis :</p>
+        <p class="right-stat-user"><%= @user.created_at.month %>/<%= @user.created_at.year %></p>
+      </div>
+      <div class="user-card-row">
+        <p>Nombre de paris :</p>
+        <p class="right-stat-user"><%= @bets.count %></p>
+      </div>
+      <div class="user-card-row">
+        <p>Paris gagnants :</p>
+        <p class="right-stat-user"><%= @won_bets.count %></p>
+      </div>
+      <div class="user-card-row">
+        <p>Score exact :</p>
+        <p class="right-stat-user"><%= @perfect_bets.count %></p>
+      </div>
+      <div class="user-card-row">
+        <p><strong>Moyenne :</strong></p>
+        <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+      </div>
+      <div class="user-card-row">
+        <p><strong>Score total :</strong></p>
+        <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+      </div>
+      <div class="user-card-row">
+        <h3>Classement :</h3>
+        <h3 class="right-stat-user"># <%= @ranking %></h3>
+      </div>
+    </div>
   </div>
 <% elsif @user == current_user %>
   <div class="user-card">
