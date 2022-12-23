@@ -11,7 +11,7 @@
 }
 
 .title-section {
-  color: $light-gray;
+  color: $black;
 }
 
 .menu {
@@ -25,18 +25,19 @@
 }
 
 .menu-link {
-  background: $black-linear;
+  background: $yellow;
   width: 100%;
   text-align: center;
   border-radius: 6px;
-  border: 1px solid $light-gray;
+  border: 1px solid $black;
+  padding-top: 2px;
   a {
     text-decoration: none;
-    color: $light-gray;
+    color: $dark-gray;
     width: 100%;
   }
   a:hover {
-    color: $white;
+    color: $black;
   }
   h2 {
     margin: 0;

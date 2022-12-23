@@ -3,7 +3,7 @@
     <% if @user.friend_with?(current_user) %>
       <div class="user-card">
           <div class="user-card-name">
-          <h2><%= @user.username %></h2>
+          <h2><%= @user.username.upcase %></h2>
         </div>
         <div class="user-card-stats">
           <div class="user-card-row">
@@ -35,11 +35,18 @@
             <h3 class="right-stat-user"># <%= @ranking %></h3>
           </div>
         </div>
+        <div class="user-card-sendmessage">
+          <%= link_to user_path(@user) do %>
+            <div class="friend-card-button">
+              <h3>MESSAGE</h3>
+            </div>
+          <% end %>
+        </div>
       </div>
     <% elsif @user == current_user %>
       <div class="user-card">
         <div class="user-card-name">
-          <h2><%= @user.username %></h2>
+          <h2><%= @user.username.upcase %></h2>
         </div>
         <div class="user-card-stats">
           <div class="user-card-row">
@@ -75,7 +82,7 @@
     <% else %>
       <div class="user-card">
         <div class="user-card-name">
-          <h2><%= @user.username %></h2>
+          <h2><%= @user.username.upcase %></h2>
         </div>
         <div class="user-card-stats">
           <div class="user-card-row">

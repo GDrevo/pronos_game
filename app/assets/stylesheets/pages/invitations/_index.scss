@@ -75,6 +75,15 @@
   }
 }
 
+.friend-card-button {
+  background-color: $yellow;
+  color: $black;
+  margin-top: 24px;
+  padding: 0 12px;
+  padding-top: 2px;
+  border-radius: 6px;
+}
+
 .friends-down-container {
   height: 40vh;
   width: 100%;
