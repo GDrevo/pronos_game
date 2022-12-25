@@ -1,15 +1,21 @@
 <div class="banner">
-  <div class="container">
+  <div class="my-container">
     <div class="menu">
       <div class="menu-link">
-        <h2><%= link_to "PARIER", seasons_path %></h2>
+        <%= link_to seasons_path do %>
+          <h2>PARIER</h2>
+        <% end %>
       </div>
       <% unless current_user.nil? %>
         <div class="menu-link">
-          <h2><%= link_to "MES STATS", new_user_invitation_path(current_user) %></h2>
+          <%= link_to new_user_invitation_path(current_user) do %>
+            <h2>MES STATS</h2>
+          <% end %>
         </div>
         <div class="menu-link">
-          <h2><%= link_to "AMIS", user_invitations_path(current_user) %></h2>
+          <%= link_to user_invitations_path(current_user) do %>
+            <h2>AMIS</h2>
+          <% end %>
         </div>
       <% end %>
     </div>
@@ -65,7 +71,7 @@
                   <p><%= user.username.upcase %></p>
                 </div>
                 <div class="new-user-column-2">
-                  <p>le <%= user.created_at.day %>/<%= user.created_at.month %> à <%= user.created_at.hour %> h</p>
+                  <p>le <%= user.created_at.day %>/<%= user.created_at.month %></p>
                 </div>
               </div>
             <% end %>

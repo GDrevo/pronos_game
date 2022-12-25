@@ -6,5 +6,6 @@ class LeaguesController < ApplicationController
     @matchweeks = Matchweek.where(league: @league)
     @matches =  Match.joins(team_home: :league).where(leagues: @league)
     @nextmatches = @matches.where(played: false).sort_by(&:date).first(10)
+    @season = @league.season
   end
 end

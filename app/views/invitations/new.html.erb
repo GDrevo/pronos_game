@@ -23,15 +23,15 @@
             <p class="right-stat-user"><%= @perfect_bets.count %></p>
           </div>
           <div class="user-card-row">
-            <p><strong>Moyenne :</strong></p>
-            <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+            <p>Moyenne :</p>
+            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></p>
           </div>
           <div class="user-card-row">
-            <p><strong>Score total :</strong></p>
-            <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+            <p>Score total :</p>
+            <p class="right-stat-user"><%= @user.total_score %></p>
           </div>
-          <div class="user-card-row">
-            <h3>Classement :</h3>
+          <div class="user-card-row-bottom">
+            <h3></h3>
             <h3 class="right-stat-user"># <%= @ranking %></h3>
           </div>
         </div>
@@ -66,15 +66,15 @@
             <p class="right-stat-user"><%= @perfect_bets.count %></p>
           </div>
           <div class="user-card-row">
-            <p><strong>Moyenne :</strong></p>
-            <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+            <p>Moyenne :</p>
+            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></p>
           </div>
           <div class="user-card-row">
-            <p><strong>Score total :</strong></p>
-            <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+            <p>Score total :</p>
+            <p class="right-stat-user"><%= @user.total_score %></p>
           </div>
-          <div class="user-card-row">
-            <h3>Classement :</h3>
+          <div class="user-card-row-bottom">
+            <h3></h3>
             <h3 class="right-stat-user"># <%= @ranking %></h3>
           </div>
         </div>
@@ -102,15 +102,15 @@
             <p class="right-stat-user"><%= @perfect_bets.count %></p>
           </div>
           <div class="user-card-row">
-            <p><strong>Moyenne :</strong></p>
-            <p class="right-stat-user"><strong><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></strong></p>
+            <p>Moyenne :</p>
+            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></p>
           </div>
           <div class="user-card-row">
-            <p><strong>Score total :</strong></p>
-            <p class="right-stat-user"><strong><%= @user.total_score %></strong></p>
+            <p>Score total :</p>
+            <p class="right-stat-user"><%= @user.total_score %></p>
           </div>
-          <div class="user-card-row">
-            <h3>Classement :</h3>
+          <div class="user-card-row-bottom">
+            <h3></h3>
             <h3 class="right-stat-user"># <%= @ranking %></h3>
           </div>
         </div>

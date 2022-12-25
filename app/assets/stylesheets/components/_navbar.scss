@@ -19,9 +19,9 @@
   color: white;
  }
 
- .dropdown-perso {
+ .dropdown-menu {
   background-color: $yellow;
-  color: $dark-gray;
+  color: $black;
  }
 
  .dropdown-item-perso:hover {
@@ -31,4 +31,36 @@
 
  .login {
   color: $yellow;
+ }
+
+ .dropdown-perso {
+  text-align: end;
+ }
+
+ .container-fluid-perso {
+  display: flex;
+  flex-wrap: inherit;
+  justify-content: space-between;
+  width: 100%;
+ }
+
+ .navbar-brand-perso {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: 24px;
+  height: 60px;
+  width: 60px;
+ }
+
+ #navbarSupportedContent {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: end;
+  margin-right: 24px;
+ }
+
+ @media screen and (max-width: 1000px) {
+  .navbar {
+    height: 90px;
+  }
  }

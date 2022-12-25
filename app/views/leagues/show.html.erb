@@ -1,5 +1,10 @@
 <div class="my-container">
-  <h1><%= @league.name.upcase %></h1>
+  <div class="league-header-title">
+    <%= link_to season_path(@season), class:"league-back-button" do %>
+      <i class="fa-solid fa-arrow-rotate-left"></i>
+    <% end %>
+    <h1><%= @league.name.upcase %></h1>
+  </div>
   <div class="league-container">
     <div class="classification">
       <div class="classification-header">
@@ -24,12 +29,12 @@
         <div class="column-1">
           <p>P.</p>
         </div>
-        <div class="column-1">
+        <%# <div class="column-1">
           <p>b.p.</p>
         </div>
         <div class="column-1">
           <p>b.c.</p>
-        </div>
+        </div> %>
         <div class="column-1">
           <p>diff.</p>
         </div>
@@ -57,12 +62,12 @@
           <div class="column-1">
             <p><%= team.defeats %></p>
           </div>
-          <div class="column-1">
-            <p><%= team.goals_for %></p>
-          </div>
-          <div class="column-1">
-            <p><%= team.goals_against %></p>
-          </div>
+          <%# <div class="column-1"> %>
+
+          <%# </div> %>
+          <%# <div class="column-1"> %>
+
+          <%# </div> %>
           <div class="column-1">
             <p><%= team.goals_for - team.goals_against %></p>
           </div>
