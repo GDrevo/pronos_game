@@ -1,6 +1,6 @@
 .user-card-container {
   margin: 0 auto;
-  width: 33%;
+  width: 45%;
   height: 85vh;
   display: flex;
   align-items: center;
@@ -28,7 +28,6 @@
 
 .user-card-stats {
   width: 100%;
-  border-bottom: 1px solid $dark-gray;
 }
 
 .user-card-row {
@@ -49,6 +48,18 @@
   }
 }
 
+.user-card-row-bottom {
+  display: flex;
+  justify-content: center;
+  h3 {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .right-stat-user {
+    text-align: end;
+  }
+}
+
 
 .user-card-friendship {
   width: 100%;
@@ -60,4 +71,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+  .user-card-container {
+    min-width: 360px;
+  }
 }

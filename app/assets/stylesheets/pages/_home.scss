@@ -26,22 +26,28 @@
 }
 
 .menu-link {
-  background: $yellow;
-  width: 100%;
+  background: $black;
+  width: 300px;
   text-align: center;
-  border-radius: 6px;
-  border: 1px solid $black;
+  border-radius: 24px;
+  border: 1px solid $yellow;
   padding-top: 2px;
   a {
     text-decoration: none;
-    color: $dark-gray;
+    color: $yellow;
     width: 100%;
   }
   a:hover {
-    color: $black;
+    color: $orange;
   }
   h2 {
     margin: 0;
+  }
+}
+
+h2 {
+  a {
+    width: 100%;
   }
 }
 
@@ -57,6 +63,7 @@ p {
 
 .home-bottom-left {
   width: 50%;
+  min-width: 360px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -105,6 +112,7 @@ p {
 
 .home-bottom-right {
   width: 50%;
+  min-width: 360px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -144,5 +152,24 @@ p {
   width: 30%;
   p {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-bottom-right {
+    margin-top: 90px;
+  }
+
+  .classement-users {
+    height: 70%;
+  }
+
+  .new-users-users {
+    height: 70%;
   }
 }

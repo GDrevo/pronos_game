@@ -23,12 +23,15 @@
 .classification-header {
   display: flex;
   color: $gray;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .classification-row {
   display: flex;
   width: 100%;
   border-bottom: 1px dotted $dark-gray;
+  justify-content: space-between;
 }
 
 .column-1 {
@@ -76,30 +79,20 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   overflow: auto;
   a {
-    // width: 19%;
-    // height: 40%;
-    // border: 1px solid $dark-gray;
-    // padding-top: 12px;
-    // padding-bottom: 12px;
-    // border-radius: 6px;
     text-decoration: none;
     color: $white;
   }
 }
 
 .all-matchweeks {
-  height: 50%;
   background: $black-linear;
-  color: $yellow;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
   padding: 12px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  h2 {
-    margin-bottom: 48px;
-  }
 }
 
 .nextmatch-card-top {
@@ -137,24 +130,132 @@
 }
 
 .matchweeks {
+  height: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 6px;
+  justify-content: space-between;
+  overflow: auto;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
 }
 
 .matchweek-card {
-  width: 9%;
+  width: 90px;
   border: 1px solid $dark-gray;
-  border-radius: 6px;
+  border-radius: 24px;
   text-align: center;
-  background: $black-linear;
+  margin: 6px;
   a {
     text-decoration: none;
     color: $white;
   }
   p {
     margin: 0;
+  }
+}
+
+.league-header-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  a {
+    width: 50px;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.league-back-button {
+  margin-right: 24px;
+  border: 1px solid $yellow;
+  border-radius: 50%;
+  i {
+    font-size: 30px;
+    padding: 9px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .my-container {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .league-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .classification {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .column-1 {
+    width: 24px;
+    p {
+      margin-top: 6px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+  }
+
+  .column-2 {
+    width: 120px;
+    p {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .column-3 {
+    width: 48px;
+    p {
+      margin-top: 6px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+  }
+
+  .matches-part {
+    width: 100%;
+  }
+
+  .next-matches {
+
+  }
+
+  .nextmatch-card {
+    width: 240px;
+  }
+
+  .all-matchweeks {
+    height: 50%;
+    background: $black-linear;
+    color: $yellow;
+    padding: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .all-matchweeks {
+    width: 100%;
+  }
+
+  .league-header-title {
+    a {
+      width: 44px;
+    }
+  }
+
+  .league-back-button {
+    margin-right: 12px;
+    padding: 3px;
+    i {
+      padding: 3px;
+    }
   }
 }

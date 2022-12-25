@@ -17,6 +17,7 @@
 
 .friends-searchbar {
   display: flex;
+  justify-content: center;
 }
 
 .friends-input {
@@ -42,13 +43,14 @@
 .friends-up-list {
   height: 75%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-left: 12px;
   margin-right: 12px;
   gap: 12px;
+  overflow: auto;
   a {
-    width: 9%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +69,7 @@
 
 .friend-card {
   text-align: center;
+  min-width: 180px;
   h3 {
     margin: 0;
   }
@@ -141,6 +144,7 @@
 
 .friends-classification-column-1 {
   width: 5%;
+  min-width: 30px;
   p {
     margin: 0;
   }
@@ -176,5 +180,30 @@
   }
   .invitation-button {
     border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .friends-up-list {
+  }
+
+  .friends-down-container {
+    height: fit-content;
+  }
+
+  .friends-searchbar {
+    width: 80%;
+  }
+
+  .friends-down {
+    flex-direction: column;
+  }
+
+  .friends-down-left {
+    width: 80%;
+  }
+
+  .friends-down-right {
+    width: 80%;
   }
 }

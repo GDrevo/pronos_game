@@ -3,4 +3,14 @@
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  background-color: $black;
+  border: 0;
+  border: 1px solid $yellow;
+  border-radius: 60px;
+  color: $yellow;
+  padding: 24px;
+}
+
+.btn-close {
+  color: $yellow !important;
 }

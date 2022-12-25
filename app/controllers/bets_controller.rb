@@ -27,7 +27,7 @@ class BetsController < ApplicationController
       team.calculate_score
       redirect_to league_path(league)
     else
-      redirect_to league_path(league), notice: "Erreur de format, ex: '2-2', '2 0'"
+      redirect_to league_path(league), notice: "Erreur de format, ex: '2-2', '2 0'... Prono non enregistré."
     end
   end
 
