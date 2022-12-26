@@ -12,6 +12,20 @@ class Bet < ApplicationRecord
     save!
   end
 
+  def doable?
+    if match.date == Date.today
+      if match.hour > Time.now.hour
+        true
+      else
+        false
+      end
+    elsif match.date > Date.today
+      true
+    else
+      false
+    end
+  end
+
   private
 
   def calculate_bet_score
