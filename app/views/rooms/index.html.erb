@@ -9,14 +9,14 @@
           <%= render @users %>
         </div>
       </div>
-      <h4> Rooms </h4>
+      <%# <h4> Rooms </h4> %>
       <%#= render partial: "layouts/new_room_form" %>
-      <div>
-        <%= turbo_stream_from "rooms" %>
-        <div id="rooms">
-          <%= render @rooms %>
-        </div>
-      </div>
+      <%# <div> %>
+        <%#= turbo_stream_from "rooms" %>
+        <%# <div id="rooms"> %>
+          <%#= render @rooms %>
+        <%# </div> %>
+      <%# </div> %>
     </div>
     <div class="col-md-10 text-light chat-right">
       <% if @single_room %>

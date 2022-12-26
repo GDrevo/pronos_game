@@ -1,4 +1,10 @@
 <div class="my-container">
+  <div class="seasons-header">
+    <%= link_to root_path, class:"league-back-button" do %>
+      <i class="fa-solid fa-arrow-rotate-left"></i>
+    <% end %>
+    <h1>MES AMIS</h1>
+  </div>
   <div class="friends-up">
     <div class="friends-up-search">
       <%= form_with url: user_invitations_path, method: :get, class: "friends-searchbar" do %>

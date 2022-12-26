@@ -1,4 +1,10 @@
 <div class="my-container">
+  <div class="seasons-header">
+    <%= link_to league_path(@league), class:"league-back-button" do %>
+      <i class="fa-solid fa-arrow-rotate-left"></i>
+    <% end %>
+    <h1>PARIER</h1>
+  </div>
   <div class="bet-container">
     <div class="bet-team-1">
       <%= cl_image_tag @match.team_home.photo.key, height: 96, width: 72, crop: :fit %>
