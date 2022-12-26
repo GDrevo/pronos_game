@@ -1076,8 +1076,8 @@ Match.create(team_home_id: leicester.id, team_away_id: newcastle.id, matchweek: 
 Match.create(team_home_id: southampton.id, team_away_id: brighton.id, matchweek: mw17, date: Date.new(2022,12,26), played: true, result: "1 3")
 Match.create(team_home_id: crystalpalace.id, team_away_id: fulham.id, matchweek: mw17, date: Date.new(2022,12,26), played: true, result: "0 3")
 Match.create(team_home_id: everton.id, team_away_id: wolverhampton.id, matchweek: mw17, date: Date.new(2022,12,26), played: true, result: "1 2")
-Match.create(team_home_id: astonvilla.id, team_away_id: liverpool.id, matchweek: mw17, date: Date.new(2022,12,26), hour: 19)
-Match.create(team_home_id: arsenal.id, team_away_id: westham.id, matchweek: mw17, date: Date.new(2022,12,26), hour: 21)
+Match.create(team_home_id: astonvilla.id, team_away_id: liverpool.id, matchweek: mw17, date: Date.new(2022,12,26), played: true, result: "1 3")
+Match.create(team_home_id: arsenal.id, team_away_id: westham.id, matchweek: mw17, date: Date.new(2022,12,26), played: true, result: "3 1")
 Match.create(team_home_id: chelsea.id, team_away_id: bournemouth.id, matchweek: mw17, date: Date.new(2022,12,27), hour: 19)
 Match.create(team_home_id: manunited.id, team_away_id: nforest.id, matchweek: mw17, date: Date.new(2022,12,27), hour: 21)
 Match.create(team_home_id: leeds.id, team_away_id: mancity.id, matchweek: mw17, date: Date.new(2022,12,28), hour: 21)
@@ -1113,310 +1113,310 @@ Match.create(team_home_id: southampton.id, team_away_id: nforest.id, matchweek: 
 puts ">> Matchweek #19 created !"
 puts "Creating matchweek #20 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: lyon.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: auxerre.id, team_away_id: montpellier.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: nantes.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: rennes.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: lille.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: monaco.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: reims.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: toulouse.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: angers.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: lens.id, matchweek: mw20, date: Date.new(2023,1,29), hour: 15)
+Match.create(team_home_id: astonvilla.id, team_away_id: leeds.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: bournemouth.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: liverpool.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: crystalpalace.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: southampton.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: mancity.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: fulham.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: leicester.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: arsenal.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: westham.id, matchweek: mw20, date: Date.new(2023,1,14), hour: 16)
 
 puts ">> Matchweek #20 created !"
 puts "Creating matchweek #21 matches..."
 
-Match.create(team_home_id: monaco.id, team_away_id: auxerre.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: angers.id, team_away_id: ajaccio.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: nantes.id, team_away_id: marseille.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: lille.id, team_away_id: clermont.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: montpellier.id, team_away_id: paris.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: lyon.id, team_away_id: brest.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: lens.id, team_away_id: nice.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: rennes.id, team_away_id: strasbourg.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: reims.id, team_away_id: lorient.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
-Match.create(team_home_id: toulouse.id, team_away_id: troyes.id, matchweek: mw21, date: Date.new(2023,2,1), hour: 20)
+Match.create(team_home_id: bournemouth.id, team_away_id: nforest.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: arsenal.id, team_away_id: manunited.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: newcastle.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: tottenham.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: brentford.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: brighton.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: chelsea.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: wolverhampton.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: astonvilla.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: everton.id, matchweek: mw21, date: Date.new(2023,1,21), hour: 16)
 
 puts ">> Matchweek #21 created !"
 puts "Creating matchweek #22 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: nantes.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: auxerre.id, team_away_id: reims.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: monaco.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: angers.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: toulouse.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: montpellier.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: lens.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: lille.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: lyon.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: nice.id, matchweek: mw22, date: Date.new(2023,2,5), hour: 21)
+Match.create(team_home_id: astonvilla.id, team_away_id: leicester.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: southampton.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: bournemouth.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: fulham.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: arsenal.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: crystalpalace.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: westham.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: leeds.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: mancity.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: liverpool.id, matchweek: mw22, date: Date.new(2023,2,4), hour: 16)
 
 puts ">> Matchweek #22 created !"
 puts "Creating matchweek #23 matches..."
 
-Match.create(team_home_id: monaco.id, team_away_id: paris.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: auxerre.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: marseille.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: lorient.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: strasbourg.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: montpellier.id, team_away_id: brest.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: ajaccio.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: lens.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: troyes.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: rennes.id, matchweek: mw23, date: Date.new(2023,2,12), hour: 15)
+Match.create(team_home_id: bournemouth.id, team_away_id: newcastle.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: arsenal.id, team_away_id: brentford.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: brighton.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: nforest.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: manunited.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: tottenham.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: everton.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: astonvilla.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: wolverhampton.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: chelsea.id, matchweek: mw23, date: Date.new(2023,2,11), hour: 16)
 
 puts ">> Matchweek #23 created !"
 puts "Creating matchweek #24 matches..."
 
-Match.create(team_home_id: auxerre.id, team_away_id: lyon.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: ajaccio.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: reims.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: lille.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: nantes.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: angers.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: monaco.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: clermont.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: marseille.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: montpellier.id, matchweek: mw24, date: Date.new(2023,2,19), hour: 15)
+Match.create(team_home_id: astonvilla.id, team_away_id: arsenal.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: crystalpalace.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: fulham.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: southampton.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: leeds.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: leicester.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: liverpool.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: mancity.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: westham.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: bournemouth.id, matchweek: mw24, date: Date.new(2023,2,18), hour: 16)
 
 puts ">> Matchweek #24 created !"
 puts "Creating matchweek #25 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: troyes.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: monaco.id, team_away_id: nice.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: lyon.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: strasbourg.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: auxerre.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: rennes.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: brest.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: montpellier.id, team_away_id: lens.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: toulouse.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: paris.id, matchweek: mw25, date: Date.new(2023,2,26), hour: 21)
+Match.create(team_home_id: bournemouth.id, team_away_id: mancity.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: liverpool.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: astonvilla.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: wolverhampton.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: southampton.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: arsenal.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: brentford.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: brighton.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: chelsea.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: nforest.id, matchweek: mw25, date: Date.new(2023,2,25), hour: 16)
 
 puts ">> Matchweek #25 created !"
 puts "Creating matchweek #26 matches..."
 
-Match.create(team_home_id: montpellier.id, team_away_id: angers.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: auxerre.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: lorient.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: nantes.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: lille.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: brest.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: marseille.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: ajaccio.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: clermont.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: monaco.id, matchweek: mw26, date: Date.new(2023,3,5), hour: 15)
+Match.create(team_home_id: arsenal.id, team_away_id: bournemouth.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: astonvilla.id, team_away_id: crystalpalace.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: fulham.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: westham.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: leeds.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: manunited.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: newcastle.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: everton.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: leicester.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: tottenham.id, matchweek: mw26, date: Date.new(2023,3,4), hour: 16)
 
 puts ">> Matchweek #26 created !"
 puts "Creating matchweek #27 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: montpellier.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: auxerre.id, team_away_id: rennes.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: monaco.id, team_away_id: reims.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: toulouse.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: lens.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: troyes.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: nice.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: lyon.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: strasbourg.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: paris.id, matchweek: mw27, date: Date.new(2023,3,12), hour: 15)
+Match.create(team_home_id: bournemouth.id, team_away_id: liverpool.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: mancity.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: brentford.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: arsenal.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: brighton.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: chelsea.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: southampton.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: wolverhampton.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: nforest.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: astonvilla.id, matchweek: mw27, date: Date.new(2023,3,11), hour: 16)
 
 puts ">> Matchweek #27 created !"
 puts "Creating matchweek #28 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: monaco.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: montpellier.id, team_away_id: clermont.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: lorient.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: nantes.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: rennes.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: angers.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: auxerre.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: marseille.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: lille.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: brest.id, matchweek: mw28, date: Date.new(2023,3,19), hour: 15)
+Match.create(team_home_id: arsenal.id, team_away_id: crystalpalace.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: astonvilla.id, team_away_id: bournemouth.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: leicester.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: manunited.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: everton.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: fulham.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: westham.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: newcastle.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: tottenham.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: leeds.id, matchweek: mw28, date: Date.new(2023,3,18), hour: 16)
 
 puts ">> Matchweek #28 created !"
 puts "Creating matchweek #29 matches..."
 
-Match.create(team_home_id: auxerre.id, team_away_id: troyes.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: monaco.id, team_away_id: strasbourg.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: nice.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: ajaccio.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: reims.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: lorient.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: montpellier.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: toulouse.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: lens.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: lyon.id, matchweek: mw29, date: Date.new(2023,4,2), hour: 21)
+Match.create(team_home_id: bournemouth.id, team_away_id: fulham.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: arsenal.id, team_away_id: leeds.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: brentford.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: astonvilla.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: leicester.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: tottenham.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: liverpool.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: manunited.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: wolverhampton.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: southampton.id, matchweek: mw29, date: Date.new(2023,4,1), hour: 16)
 
 puts ">> Matchweek #29 created !"
 puts "Creating matchweek #30 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: auxerre.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: lille.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: marseille.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: monaco.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: montpellier.id, team_away_id: toulouse.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: paris.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: rennes.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: strasbourg.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: brest.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: clermont.id, matchweek: mw30, date: Date.new(2023,4,9), hour: 15)
+Match.create(team_home_id: astonvilla.id, team_away_id: nforest.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: newcastle.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: westham.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: crystalpalace.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: bournemouth.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: arsenal.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: everton.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: mancity.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: brighton.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: chelsea.id, matchweek: mw30, date: Date.new(2023,4,8), hour: 16)
 
 puts ">> Matchweek #30 created !"
 puts "Creating matchweek #31 matches..."
 
-Match.create(team_home_id: auxerre.id, team_away_id: nantes.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: monaco.id, team_away_id: lorient.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: angers.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: montpellier.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: troyes.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: lens.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: ajaccio.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: nice.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: reims.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: lyon.id, matchweek: mw31, date: Date.new(2023,4,16), hour: 15)
+Match.create(team_home_id: astonvilla.id, team_away_id: newcastle.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: brighton.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: fulham.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: liverpool.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: leicester.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: manunited.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: crystalpalace.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: bournemouth.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: arsenal.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: brentford.id, matchweek: mw31, date: Date.new(2023,4,15), hour: 16)
 
 puts ">> Matchweek #31 created !"
 puts "Creating matchweek #32 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: brest.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: auxerre.id, team_away_id: lille.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: paris.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: toulouse.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: troyes.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: montpellier.id, team_away_id: rennes.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: clermont.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: monaco.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: strasbourg.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: marseille.id, matchweek: mw32, date: Date.new(2023,4,23), hour: 21)
+Match.create(team_home_id: bournemouth.id, team_away_id: westham.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: arsenal.id, team_away_id: southampton.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: astonvilla.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: mancity.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: everton.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: leeds.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: wolverhampton.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: nforest.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: chelsea.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: tottenham.id, matchweek: mw32, date: Date.new(2023,4,22), hour: 16)
 
 puts ">> Matchweek #32 created !"
 puts "Creating matchweek #33 matches..."
 
-Match.create(team_home_id: monaco.id, team_away_id: montpellier.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: reims.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: ajaccio.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: auxerre.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: lorient.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: lyon.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: nantes.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: angers.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: lens.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: nice.id, matchweek: mw33, date: Date.new(2023,4,30), hour: 15)
+Match.create(team_home_id: everton.id, team_away_id: newcastle.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: leeds.id, team_away_id: leicester.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: nforest.id, team_away_id: brighton.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: tottenham.id, team_away_id: manunited.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: westham.id, team_away_id: liverpool.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: wolverhampton.id, team_away_id: crystalpalace.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: astonvilla.id, team_away_id: fulham.id, matchweek: mw33, date: Date.new(2023,4,25), hour: 21)
+Match.create(team_home_id: chelsea.id, team_away_id: brentford.id, matchweek: mw33, date: Date.new(2023,4,26), hour: 21)
+Match.create(team_home_id: southampton.id, team_away_id: bournemouth.id, matchweek: mw33, date: Date.new(2023,4,26), hour: 21)
+Match.create(team_home_id: mancity.id, team_away_id: arsenal.id, matchweek: mw33, date: Date.new(2023,4,26), hour: 21)
 
 puts ">> Matchweek #33 created !"
 puts "Creating matchweek #34 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: toulouse.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: auxerre.id, team_away_id: clermont.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: angers.id, team_away_id: monaco.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: brest.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: strasbourg.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: rennes.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: montpellier.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: marseille.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: lille.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: paris.id, matchweek: mw34, date: Date.new(2023,5,7), hour: 15)
+Match.create(team_home_id: bournemouth.id, team_away_id: leeds.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: arsenal.id, team_away_id: chelsea.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: nforest.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: wolverhampton.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: westham.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: mancity.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: everton.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: tottenham.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: astonvilla.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: southampton.id, matchweek: mw34, date: Date.new(2023,4,29), hour: 16)
 
 puts ">> Matchweek #34 created !"
 puts "Creating matchweek #35 matches..."
 
-Match.create(team_home_id: monaco.id, team_away_id: lille.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: clermont.id, team_away_id: lyon.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: montpellier.id, team_away_id: lorient.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: marseille.id, team_away_id: angers.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: paris.id, team_away_id: ajaccio.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: lens.id, team_away_id: reims.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: strasbourg.id, team_away_id: nice.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: auxerre.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: rennes.id, team_away_id: troyes.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
-Match.create(team_home_id: toulouse.id, team_away_id: nantes.id, matchweek: mw35, date: Date.new(2023,5,14), hour: 15)
+Match.create(team_home_id: bournemouth.id, team_away_id: chelsea.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: everton.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: leicester.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: brentford.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: leeds.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: arsenal.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: southampton.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: crystalpalace.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: manunited.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: astonvilla.id, matchweek: mw35, date: Date.new(2023,5,6), hour: 16)
 
 puts ">> Matchweek #35 created !"
 puts "Creating matchweek #36 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: rennes.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: auxerre.id, team_away_id: paris.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: lorient.id, team_away_id: lens.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: nantes.id, team_away_id: montpellier.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: lille.id, team_away_id: marseille.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: nice.id, team_away_id: toulouse.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: lyon.id, team_away_id: monaco.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: brest.id, team_away_id: clermont.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: reims.id, team_away_id: angers.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
-Match.create(team_home_id: troyes.id, team_away_id: strasbourg.id, matchweek: mw36, date: Date.new(2023,5,21), hour: 15)
+Match.create(team_home_id: arsenal.id, team_away_id: brighton.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: astonvilla.id, team_away_id: tottenham.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: brentford.id, team_away_id: westham.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: chelsea.id, team_away_id: nforest.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: crystalpalace.id, team_away_id: bournemouth.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: everton.id, team_away_id: mancity.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: leeds.id, team_away_id: newcastle.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: leicester.id, team_away_id: liverpool.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: manunited.id, team_away_id: wolverhampton.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
+Match.create(team_home_id: southampton.id, team_away_id: fulham.id, matchweek: mw36, date: Date.new(2023,5,13), hour: 16)
 
 puts ">> Matchweek #36 created !"
 puts "Creating matchweek #37 matches..."
 
-Match.create(team_home_id: angers.id, team_away_id: troyes.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: clermont.id, team_away_id: lorient.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: lille.id, team_away_id: nantes.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: montpellier.id, team_away_id: nice.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: lyon.id, team_away_id: reims.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: marseille.id, team_away_id: brest.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: lens.id, team_away_id: ajaccio.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: strasbourg.id, team_away_id: paris.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: rennes.id, team_away_id: monaco.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
-Match.create(team_home_id: toulouse.id, team_away_id: auxerre.id, matchweek: mw37, date: Date.new(2023,5,27), hour: 21)
+Match.create(team_home_id: bournemouth.id, team_away_id: manunited.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: brighton.id, team_away_id: southampton.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: fulham.id, team_away_id: crystalpalace.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: liverpool.id, team_away_id: astonvilla.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: mancity.id, team_away_id: chelsea.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: newcastle.id, team_away_id: leicester.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: nforest.id, team_away_id: arsenal.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: tottenham.id, team_away_id: brentford.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: westham.id, team_away_id: leeds.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
+Match.create(team_home_id: wolverhampton.id, team_away_id: everton.id, matchweek: mw37, date: Date.new(2023,5,20), hour: 16)
 
 puts ">> Matchweek #37 created !"
 puts "Creating matchweek #38 matches..."
 
-Match.create(team_home_id: ajaccio.id, team_away_id: marseille.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: auxerre.id, team_away_id: lens.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: monaco.id, team_away_id: toulouse.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: lorient.id, team_away_id: strasbourg.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: nantes.id, team_away_id: angers.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: nice.id, team_away_id: lyon.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: paris.id, team_away_id: clermont.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: brest.id, team_away_id: rennes.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: reims.id, team_away_id: montpellier.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
-Match.create(team_home_id: troyes.id, team_away_id: lille.id, matchweek: mw38, date: Date.new(2023,6,3), hour: 21)
+Match.create(team_home_id: arsenal.id, team_away_id: wolverhampton.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: astonvilla.id, team_away_id: brighton.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: brentford.id, team_away_id: mancity.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: chelsea.id, team_away_id: newcastle.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: crystalpalace.id, team_away_id: nforest.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: everton.id, team_away_id: bournemouth.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: leeds.id, team_away_id: tottenham.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: leicester.id, team_away_id: westham.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: manunited.id, team_away_id: fulham.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
+Match.create(team_home_id: southampton.id, team_away_id: liverpool.id, matchweek: mw38, date: Date.new(2023,5,28), hour: 17)
 
 puts "Calculating Teams ranking"
 
-paris.calculate_score
-paris.save!
-lens.calculate_score
-lens.save!
-rennes.calculate_score
-rennes.save!
-marseille.calculate_score
-marseille.save!
-lorient.calculate_score
-lorient.save!
-monaco.calculate_score
-monaco.save!
-lille.calculate_score
-lille.save!
-lyon.calculate_score
-lyon.save!
-nice.calculate_score
-nice.save!
-clermont.calculate_score
-clermont.save!
-reims.calculate_score
-reims.save!
-toulouse.calculate_score
-toulouse.save!
-troyes.calculate_score
-troyes.save!
-montpellier.calculate_score
-montpellier.save!
-nantes.calculate_score
-nantes.save!
-brest.calculate_score
-brest.save!
-auxerre.calculate_score
-auxerre.save!
-ajaccio.calculate_score
-ajaccio.save!
-strasbourg.calculate_score
-strasbourg.save!
-angers.calculate_score
-angers.save!
+arsenal.calculate_score
+arsenal.save!
+mancity.calculate_score
+mancity.save!
+newcastle.calculate_score
+newcastle.save!
+tottenham.calculate_score
+tottenham.save!
+manunited.calculate_score
+manunited.save!
+liverpool.calculate_score
+liverpool.save!
+brighton.calculate_score
+brighton.save!
+chelsea.calculate_score
+chelsea.save!
+brentford.calculate_score
+brentford.save!
+fulham.calculate_score
+fulham.save!
+crystalpalace.calculate_score
+crystalpalace.save!
+astonvilla.calculate_score
+astonvilla.save!
+leicester.calculate_score
+leicester.save!
+bournemouth.calculate_score
+bournemouth.save!
+leeds.calculate_score
+leeds.save!
+westham.calculate_score
+westham.save!
+everton.calculate_score
+everton.save!
+nforest.calculate_score
+nforest.save!
+southampton.calculate_score
+southampton.save!
+wolverhampton.calculate_score
+wolverhampton.save!
 
 puts ">> Team ranking calculated !"
