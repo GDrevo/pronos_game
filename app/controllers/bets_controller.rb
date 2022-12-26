@@ -3,6 +3,7 @@ class BetsController < ApplicationController
     @bet = Bet.new(user: current_user)
     @bet.match_id = params[:match_id]
     @match = Match.find(params[:match_id])
+    @league = @match.team_home.league
     @matches_home_home = Match.where(team_home: @match.team_home).where(played: true)
     @matches_home_away = Match.where(team_away: @match.team_home).where(played: true)
     @matches_home = @matches_home_home + @matches_home_away

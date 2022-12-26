@@ -1,4 +1,17 @@
 <div class="my-container">
+  <div class="seasons-header">
+    <% if @user == current_user %>
+      <%= link_to root_path, class:"league-back-button" do %>
+        <i class="fa-solid fa-arrow-rotate-left"></i>
+      <% end %>
+      <h1></h1>
+    <% else %>
+      <%= link_to user_invitations_path(current_user), class:"league-back-button" do %>
+        <i class="fa-solid fa-arrow-rotate-left"></i>
+      <% end %>
+      <h1></h1>
+    <% end %>
+  </div>
   <div class="user-card-container">
     <% if @user.friend_with?(current_user) %>
       <div class="user-card">

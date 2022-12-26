@@ -23,3 +23,26 @@
     margin: 0;
   }
  }
+
+ .seasons-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 68px;
+  h1 {
+    font-size: 42px !important;
+  }
+  a {
+    width: 50px;
+    // height: 100%;
+    text-align: center;
+  }
+ }
+
+ @media screen and (max-width: 1000px) {
+   .seasons-header {
+    a {
+      width: 44px;
+    }
+  }
+ }
