@@ -380,7 +380,7 @@ Match.create(team_home_id: monaco.id, team_away_id: marseille.id, matchweek: mw1
 puts ">> Matchweek #15 created !"
 puts "Creating matchweek #16 matches..."
 
-Match.create(team_home_id: troyes.id, team_away_id: nantes.id, matchweek: mw16, date: Date.new(2022,12,28))
+Match.create(team_home_id: troyes.id, team_away_id: nantes.id, matchweek: mw16, date: Date.new(2022,12,26), hour: 15)
 Match.create(team_home_id: ajaccio.id, team_away_id: angers.id, matchweek: mw16, date: Date.new(2022,12,28))
 Match.create(team_home_id: auxerre.id, team_away_id: monaco.id, matchweek: mw16, date: Date.new(2022,12,28))
 Match.create(team_home_id: clermont.id, team_away_id: lille.id, matchweek: mw16, date: Date.new(2022,12,28))
