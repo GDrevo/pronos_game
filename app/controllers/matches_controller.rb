@@ -12,7 +12,7 @@ class MatchesController < ApplicationController
     all_bets.each do |bet|
       bet.result = match.result
       bet.compute_score
-      bet.user.send_notif_prono(bet.score)
+      bet.user.send_notif_prono(bet)
       bet.save
       bet.user.calculate_total_score
     end

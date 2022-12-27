@@ -1,24 +1,27 @@
 
 <% if current_user.admin? && nextmatch.played? == false %>
-  <%= link_to new_or_edit_match_bet_path(nextmatch) do %>
-    <div class="nextmatch-card">
-      <div class="nextmatch-card-top">
-          <%= cl_image_tag Team.find(nextmatch.team_home_id).photo.key, height: 48, width: 36, crop: :fit %>
-        <h4>-</h4>
-        <%= cl_image_tag Team.find(nextmatch.team_away_id).photo.key, height: 48, width: 36, crop: :fit %>
-      </div>
-      <div class="nextmatch-card-bottom">
-        <p><%= nextmatch.date.strftime('%A').chars.first(3).join %> <%= nextmatch.date.day %>/<%= nextmatch.date.month %></p>
-        <div class="nextmatch-prono">
-          <% if Bet.where(match: nextmatch, user: current_user).exists? %>
-            <p>Prono: <%= Bet.where(match: nextmatch, user: current_user).last.prono %></p>
-          <% else %>
-            <p>Nouveau prono</p>
-          <% end %>
+  <div class="tooltip-c">
+    <span class="tooltiptext"><%= nextmatch.team_home.name %> - <%= nextmatch.team_away.name %></span>
+    <%= link_to new_or_edit_match_bet_path(nextmatch) do %>
+      <div class="nextmatch-card">
+        <div class="nextmatch-card-top">
+            <%= cl_image_tag Team.find(nextmatch.team_home_id).photo.key, height: 48, width: 36, crop: :fit %>
+          <h4>-</h4>
+          <%= cl_image_tag Team.find(nextmatch.team_away_id).photo.key, height: 48, width: 36, crop: :fit %>
+        </div>
+        <div class="nextmatch-card-bottom">
+          <p><%= nextmatch.date.strftime('%A').chars.first(3).join %> <%= nextmatch.date.day %>/<%= nextmatch.date.month %></p>
+          <div class="nextmatch-prono">
+            <% if Bet.where(match: nextmatch, user: current_user).exists? %>
+              <p>Prono: <%= Bet.where(match: nextmatch, user: current_user).last.prono %></p>
+            <% else %>
+              <p>Nouveau prono</p>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 <% else %>
   <% if Bet.where(match: nextmatch, user: current_user).exists? %>
     <div class="nextmatch-card">

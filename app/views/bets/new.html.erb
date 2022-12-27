@@ -8,7 +8,8 @@
   <div class="bet-container">
     <div class="bet-team-1">
       <%= cl_image_tag @match.team_home.photo.key, height: 96, width: 72, crop: :fit %>
-      <h3 class="last-five-matches-title">5 DERNIERS MATCHES</h3>
+      <h3><%= @match.team_home.name.upcase %></h3>
+      <h5 class="last-five-matches-title">5 DERNIERS MATCHES</h5>
       <div class="last-five-matches">
         <% @matches_home.each do |match| %>
           <div class="last-five-card">
@@ -40,11 +41,13 @@
           <%= form.text_field :prono, class: "bet-form-input" %>
           <%= form.submit "GO", class: "bet-form-submit" %>
         <% end %>
+        <p>Entrez votre prono dans le format suivant : "0 2", "1/0", "3-3"...</p>
       </div>
 
     <div class="bet-team-2">
       <%= cl_image_tag @match.team_away.photo.key, height: 96, width: 72, crop: :fit %>
-      <h3 class="last-five-matches-title">5 DERNIERS MATCHES</h3>
+      <h3><%= @match.team_away.name.upcase %></h3>
+      <h5 class="last-five-matches-title">5 DERNIERS MATCHES</h5>
       <div class="last-five-matches">
         <% @matches_away.each do |match| %>
           <div class="last-five-card">

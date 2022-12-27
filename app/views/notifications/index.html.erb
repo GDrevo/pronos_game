@@ -7,7 +7,7 @@
           <p><%= notification.content %></p>
         </div>
         <div class="notif-card-time">
-          <p><%= notification.created_at.day %>/<%= notification.created_at.month %> à <%= notification.created_at.hour %>h</p>
+          <p><%= notification.created_at.day %>/<%= notification.created_at.month %> à <%= notification.created_at.strftime('%H') %>h<%= notification.created_at.strftime('%M') %></p>
         </div>
         </div>
       <% end %>
