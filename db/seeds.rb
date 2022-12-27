@@ -26,16 +26,16 @@ User.destroy_all
 # puts ">> 3 public chatrooms created !"
 
 puts "Creating Players..."
-gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', username: 'Guillaume', admin: true)
-ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
+gui = User.create(email: 'guillaume@gmail.com', password: 'Brest2022', username: 'Guillaume', admin: true)
+# ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
 
 puts ">> Players created !"
 
-puts "Creating friendship..."
+# puts "Creating friendship..."
 
-Invitation.create(user: gui, friend_id: ber.id, confirmed: true)
+# Invitation.create(user: gui, friend_id: ber.id, confirmed: true)
 
-puts "Guillaume and Bernard are now friends !"
+# puts "Guillaume and Bernard are now friends !"
 
 puts "Creating a new Season..."
 
@@ -363,7 +363,7 @@ Match.create(team_home_id: monaco.id, team_away_id: marseille.id, matchweek: mw1
 puts ">> Matchweek #15 created !"
 puts "Creating matchweek #16 matches..."
 
-Match.create(team_home_id: troyes.id, team_away_id: nantes.id, matchweek: mw16, date: Date.new(2022,12,26), hour: 15)
+Match.create(team_home_id: troyes.id, team_away_id: nantes.id, matchweek: mw16, date: Date.new(2022,12,28), hour: 15)
 Match.create(team_home_id: ajaccio.id, team_away_id: angers.id, matchweek: mw16, date: Date.new(2022,12,28), hour: 15)
 Match.create(team_home_id: auxerre.id, team_away_id: monaco.id, matchweek: mw16, date: Date.new(2022,12,28), hour: 17)
 Match.create(team_home_id: clermont.id, team_away_id: lille.id, matchweek: mw16, date: Date.new(2022,12,28), hour: 19)
