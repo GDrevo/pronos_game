@@ -18,30 +18,19 @@ League.destroy_all
 Season.destroy_all
 User.destroy_all
 
-puts "Creating chatrooms..."
-Room.create(name: 'ligue 1', is_private: false)
-Room.create(name: 'Discussions générales', is_private: false)
-Room.create(name: 'Conseils sur les pronos', is_private: false)
-puts ">> 3 public chatrooms created !"
+# puts "Creating chatrooms..."
+# Room.create(name: 'ligue 1', is_private: false)
+# Room.create(name: 'Discussions générales', is_private: false)
+# Room.create(name: 'Conseils sur les pronos', is_private: false)
+# puts ">> 3 public chatrooms created !"
 
-puts "Creating 11 Players..."
+puts "Creating Players..."
 gui = User.create(email: 'gui@gui.com', password: 'gui@gui.com', username: 'Guillaume', admin: true)
 ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
-roger = User.create(email: 'roger@roger.com', password: 'roger@roger.com', username: "Roger")
-john = User.create(email: 'john@john.com', password: 'john@john.com', username: "John")
-marcel = User.create(email: 'marcel@marcel.com', password: 'marcel@marcel.com', username: "Marcel")
-julie = User.create(email: 'julie@julie.com', password: 'julie@julie.com', username: "Julie")
-jane = User.create(email: 'jane@jane.com', password: 'jane@jane.com', username: "Jane")
-mary = User.create(email: 'mary@mary.com', password: 'mary@mary.com', username: "Mary")
-tim = User.create(email: 'tim@tim.com', password: 'tim@tim.com', username: "Tim")
-pierre = User.create(email: 'pierre@pierre.com', password: 'pierre@pierre.com', username: "Pierre")
-theo = User.create(email: 'theo@theo.com', password: 'theo@theo.com', username: "Théo")
-max = User.create(email: 'max@max.com', password: 'max@max.com', username: "Max")
-antoine = User.create(email: 'antoine@antoine.com', password: 'antoine@antoine.com', username: "Antoine")
 
 puts ">> Players created !"
 
-puts "Creating friendship between gui and ber..."
+puts "Creating friendship..."
 
 Invitation.create(user: gui, friend_id: ber.id, confirmed: true)
 
@@ -791,7 +780,7 @@ westham.save!
 everton = Team.new(name: 'Everton', league_id: premierleague.id)
 everton.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'teams', 'everton.png')), filename: 'everton.png', content_type: 'everton.png')
 everton.save!
-nforest = Team.new(name: 'N. Forest', league_id: premierleague.id)
+nforest = Team.new(name: 'Nottingham F.', league_id: premierleague.id)
 nforest.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'teams', 'nforest.png')), filename: 'nforest.png', content_type: 'nforest.png')
 nforest.save!
 southampton = Team.new(name: 'Southampton', league_id: premierleague.id)
@@ -931,16 +920,16 @@ Match.create(team_home_id: manunited.id, team_away_id: arsenal.id, matchweek: mw
 puts ">> Matchweek #6 created !"
 puts "Creating matchweek #7 matches..."
 
-Match.create(team_home_id: bournemouth.id, team_away_id: brighton.id, matchweek: mw7, date: Date.new(2022,9,10), played: false, result: "")
-Match.create(team_home_id: southampton.id, team_away_id: brentford.id, matchweek: mw7, date: Date.new(2022,9,10), played: false, result: "")
-Match.create(team_home_id: leicester.id, team_away_id: astonvilla.id, matchweek: mw7, date: Date.new(2022,9,10), played: false, result: "")
-Match.create(team_home_id: fulham.id, team_away_id: chelsea.id, matchweek: mw7, date: Date.new(2022,9,10), played: false, result: "")
-Match.create(team_home_id: liverpool.id, team_away_id: wolverhampton.id, matchweek: mw7, date: Date.new(2022,9,10), played: false, result: "")
-Match.create(team_home_id: mancity.id, team_away_id: tottenham.id, matchweek: mw7, date: Date.new(2022,9,10), played: false, result: "")
-Match.create(team_home_id: westham.id, team_away_id: newcastle.id, matchweek: mw7, date: Date.new(2022,9,11), played: false, result: "")
-Match.create(team_home_id: arsenal.id, team_away_id: everton.id, matchweek: mw7, date: Date.new(2022,9,11), played: false, result: "")
-Match.create(team_home_id: crystalpalace.id, team_away_id: manunited.id, matchweek: mw7, date: Date.new(2022,9,11), played: false, result: "")
-Match.create(team_home_id: leeds.id, team_away_id: nforest.id, matchweek: mw7, date: Date.new(2022,9,12), played: false, result: "")
+Match.create(team_home_id: bournemouth.id, team_away_id: brighton.id, matchweek: mw7, date: Date.new(2023,9,10), played: false, result: "")
+Match.create(team_home_id: southampton.id, team_away_id: brentford.id, matchweek: mw7, date: Date.new(2023,9,10), played: false, result: "")
+Match.create(team_home_id: leicester.id, team_away_id: astonvilla.id, matchweek: mw7, date: Date.new(2023,9,10), played: false, result: "")
+Match.create(team_home_id: fulham.id, team_away_id: chelsea.id, matchweek: mw7, date: Date.new(2023,9,10), played: false, result: "")
+Match.create(team_home_id: liverpool.id, team_away_id: wolverhampton.id, matchweek: mw7, date: Date.new(2023,9,10), played: false, result: "")
+Match.create(team_home_id: mancity.id, team_away_id: tottenham.id, matchweek: mw7, date: Date.new(2023,9,10), played: false, result: "")
+Match.create(team_home_id: westham.id, team_away_id: newcastle.id, matchweek: mw7, date: Date.new(2023,9,11), played: false, result: "")
+Match.create(team_home_id: arsenal.id, team_away_id: everton.id, matchweek: mw7, date: Date.new(2023,9,11), played: false, result: "")
+Match.create(team_home_id: crystalpalace.id, team_away_id: manunited.id, matchweek: mw7, date: Date.new(2023,9,11), played: false, result: "")
+Match.create(team_home_id: leeds.id, team_away_id: nforest.id, matchweek: mw7, date: Date.new(2023,9,12), played: false, result: "")
 
 puts ">> Matchweek #7 created !"
 puts "Creating matchweek #8 matches..."
@@ -949,12 +938,12 @@ Match.create(team_home_id: astonvilla.id, team_away_id: southampton.id, matchwee
 Match.create(team_home_id: nforest.id, team_away_id: fulham.id, matchweek: mw8, date: Date.new(2022,9,16), played: true, result: "2 3")
 Match.create(team_home_id: wolverhampton.id, team_away_id: mancity.id, matchweek: mw8, date: Date.new(2022,9,17), played: true, result: "0 3")
 Match.create(team_home_id: newcastle.id, team_away_id: bournemouth.id, matchweek: mw8, date: Date.new(2022,9,17), played: true, result: "1 1")
-Match.create(team_home_id: brighton.id, team_away_id: crystalpalace.id, matchweek: mw8, date: Date.new(2022,9,17), played: false, result: "")
+Match.create(team_home_id: brighton.id, team_away_id: crystalpalace.id, matchweek: mw8, date: Date.new(2023,9,17), played: false, result: "")
 Match.create(team_home_id: tottenham.id, team_away_id: leicester.id, matchweek: mw8, date: Date.new(2022,9,17), played: true, result: "6 2")
 Match.create(team_home_id: brentford.id, team_away_id: arsenal.id, matchweek: mw8, date: Date.new(2022,9,18), played: true, result: "0 3")
-Match.create(team_home_id: manunited.id, team_away_id: leeds.id, matchweek: mw8, date: Date.new(2022,9,18), played: false, result: "")
+Match.create(team_home_id: manunited.id, team_away_id: leeds.id, matchweek: mw8, date: Date.new(2023,9,18), played: false, result: "")
 Match.create(team_home_id: everton.id, team_away_id: westham.id, matchweek: mw8, date: Date.new(2022,9,18), played: true, result: "1 0")
-Match.create(team_home_id: chelsea.id, team_away_id: liverpool.id, matchweek: mw8, date: Date.new(2022,9,18), played: false, result: "")
+Match.create(team_home_id: chelsea.id, team_away_id: liverpool.id, matchweek: mw8, date: Date.new(2023,9,18), played: false, result: "")
 
 puts ">> Matchweek #8 created !"
 puts "Creating matchweek #9 matches..."
@@ -1003,7 +992,7 @@ puts "Creating matchweek #12 matches..."
 
 Match.create(team_home_id: brighton.id, team_away_id: nforest.id, matchweek: mw12, date: Date.new(2022,10,18), played: true, result: "0 0")
 Match.create(team_home_id: crystalpalace.id, team_away_id: wolverhampton.id, matchweek: mw12, date: Date.new(2022,10,18), played: true, result: "2 1")
-Match.create(team_home_id: arsenal.id, team_away_id: mancity.id, matchweek: mw12, date: Date.new(2022,10,19), played: false, result: "")
+Match.create(team_home_id: arsenal.id, team_away_id: mancity.id, matchweek: mw12, date: Date.new(2023,10,19), played: false, result: "")
 Match.create(team_home_id: brentford.id, team_away_id: chelsea.id, matchweek: mw12, date: Date.new(2022,10,19), played: true, result: "0 0")
 Match.create(team_home_id: newcastle.id, team_away_id: everton.id, matchweek: mw12, date: Date.new(2022,10,19), played: true, result: "1 0")
 Match.create(team_home_id: liverpool.id, team_away_id: westham.id, matchweek: mw12, date: Date.new(2022,10,19), played: true, result: "1 0")

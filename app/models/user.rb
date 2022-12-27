@@ -41,6 +41,10 @@ class User < ApplicationRecord
     # save
   end
 
+  def bet_number
+    Bet.where(user_id: self.id).count
+  end
+
   def ranking
     all_players = User.all.order(total_score: :desc)
     all_players.pluck(:id).index(id)

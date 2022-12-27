@@ -22,7 +22,7 @@
     <div class="home-bottom">
       <div class="home-bottom-left">
         <div class="home-classement">
-          <h2>CLASSEMENT</h2>
+          <h2>SCORE TOP 20</h2>
           <div class="classement-header">
             <div class="classement-column-1">
               <p>#</p>
@@ -52,26 +52,30 @@
         </div>
       </div>
       <div class="home-bottom-right">
-        <h2>NOUVEAUX JOUEURS</h2>
-        <div class="new-users">
-          <div class="new-users-header">
-            <div class="new-user-row">
-              <div class="new-user-column-1">
-                <p>Nom</p>
-              </div>
-              <div class="new-user-column-2">
-                <p>Ajouté</p>
-              </div>
+        <div class="home-classement">
+          <h2>MOYENNE TOP 20</h2>
+          <div class="classement-header">
+            <div class="classement-column-1">
+              <p>#</p>
+            </div>
+            <div class="classement-column-2">
+              <p>Nom</p>
+            </div>
+            <div class="classement-column-3">
+              <p>Moyenne</p>
             </div>
           </div>
-          <div class="new-users-users">
-            <% @new_users.each do |user| %>
-              <div class="new-user-row">
-                <div class="new-user-column-1">
-                  <p><%= user.username.upcase %></p>
+          <div class="classement-users">
+            <% @usersmoy.each_with_index do |user, index| %>
+              <div class="classement-row">
+                <div class="classement-column-1">
+                  <p><%= index + 1 %></p>
                 </div>
-                <div class="new-user-column-2">
-                  <p>le <%= user.created_at.day %>/<%= user.created_at.month %></p>
+                <div class="classement-column-2">
+                  <p><%= user.username %></p>
+                </div>
+                <div class="classement-column-3">
+                  <p><%= (user.total_score.to_f / user.bet_number).round(2) unless user.bet_number.zero? %></p>
                 </div>
               </div>
             <% end %>

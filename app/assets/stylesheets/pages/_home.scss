@@ -59,10 +59,11 @@ p {
   height: 50vh;
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .home-bottom-left {
-  width: 50%;
+  width: 45%;
   min-width: 360px;
   height: 50vh;
   display: flex;
@@ -102,16 +103,16 @@ p {
 }
 
 .classement-column-2 {
-  width: 80%;
+  width: 60%;
 }
 
 .classement-column-3 {
-  width: 10%;
+  width: 30%;
   text-align: center;
 }
 
 .home-bottom-right {
-  width: 50%;
+  width: 45%;
   min-width: 360px;
   height: 50vh;
   display: flex;
