@@ -6,7 +6,6 @@ class InvitationsController < ApplicationController
     if params[:query].present?
       sql_query = <<~SQL
         users.username ILIKE :query
-        OR users.email ILIKE :query
       SQL
       @users = User.where(sql_query, query: "%#{params[:query]}%").first(10)
       @users = [] if @users.length.zero?
