@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users, only: %i[index show] do
     resources :invitations, only: %i[index show new create update destroy]
+    resources :notifications, only: %i[index create]
   end
   resources :seasons, only: %i[index show]
   resources :leagues, only: %i[index show]

@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :bets
   has_many :invitations
   has_many :messages
+  has_many :notifications
   has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "friend_id"
 
   validates :username, uniqueness: true
@@ -34,15 +35,17 @@ class User < ApplicationRecord
       self.total_score += bet.score
     end
     save
-    # bet = bets.where(match_id: admin_bet.match_id).last
-    # bet.result = admin_bet.result if bet.result.empty?
-    # bet.compute_score
-    # self.total_score += bet.score
-    # save
   end
 
   def bet_number
     Bet.where(user_id: self.id).count
+  end
+
+  def send_notif_prono(score)
+    @notif = Notification.new(user: self)
+    content = "Vous avez gagné #{score} pts grâce à un bon pronostic !"
+    @notif.content = content
+    @notif.save
   end
 
   def ranking

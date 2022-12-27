@@ -16,6 +16,7 @@
             <div class="dropdown-menu dropdown-menu-end dropdown-perso" aria-labelledby="navbarDropdown">
               <%= link_to "Messages", messenger_path, class: "dropdown-item dropdown-item-perso" %>
               <%= link_to "Parier", seasons_path, class: "dropdown-item dropdown-item-perso" %>
+              <%= link_to "Notifications", user_notifications_path(current_user), class: "dropdown-item dropdown-item-perso" %>
               <%= link_to "Me déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item dropdown-item-perso" %>
             </div>
           </li>
