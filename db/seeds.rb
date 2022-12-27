@@ -26,7 +26,7 @@ User.destroy_all
 # puts ">> 3 public chatrooms created !"
 
 puts "Creating Players..."
-gui = User.create(email: 'guillaume.drevo@gmail.com', password: 'Brest2022', username: 'Guillaume', admin: true)
+gui = User.create(email: 'guillaume.drevo@gmail.com', password: 'PronoApp', username: 'Guillaume', admin: true)
 # ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
 
 puts ">> Players created !"
