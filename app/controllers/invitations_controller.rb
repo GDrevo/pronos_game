@@ -38,13 +38,15 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(user: current_user)
     @invitation.friend_id = params[:user_id]
     @invitation.save
-    redirect_to user_path(@invitation.friend_id)
+    @invitation.friend.send_notif_friend_request(@invitation.user)
+    redirect_to user_invitations_path(current_user)
   end
 
   def update
     @invitation = Invitation.find(params[:id])
     @invitation.confirmed = true
     @invitation.save!
+    @invitation.user.send_notif_friend_accepted(@invitation.friend)
     redirect_to user_invitations_path(current_user)
   end
 

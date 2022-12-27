@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :bets
   has_many :invitations
   has_many :messages
+  has_many :notifications
   has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "friend_id"
 
   validates :username, uniqueness: true
@@ -34,15 +35,31 @@ class User < ApplicationRecord
       self.total_score += bet.score
     end
     save
-    # bet = bets.where(match_id: admin_bet.match_id).last
-    # bet.result = admin_bet.result if bet.result.empty?
-    # bet.compute_score
-    # self.total_score += bet.score
-    # save
   end
 
   def bet_number
     Bet.where(user_id: self.id).count
+  end
+
+  def send_notif_prono(bet)
+    notif = Notification.new(user: self)
+    content = "Vous avez gagné #{bet.score} pts grâce à un bon pronostic ! #{bet.match.team_home.name} - #{bet.match.team_away.name}, vous aviez pronostiqué '#{bet.prono}', résultat final : '#{bet.match.result}'"
+    notif.content = content
+    notif.save
+  end
+
+  def send_notif_friend_request(requester)
+    notif = Notification.new(user: self)
+    content = "#{requester.username} vous a envoyé une demande d'ami, accédez au menu AMIS pour y répondre."
+    notif.content = content
+    notif.save
+  end
+
+  def send_notif_friend_accepted(accepter)
+    notif = Notification.new(user: self)
+    content = "#{accepter.username} a accepté votre demande d'ami, vous pouvez désormais discuter ensemble."
+    notif.content = content
+    notif.save
   end
 
   def ranking
