@@ -8,12 +8,12 @@
     </div>
     <div class="headers-buttons">
       <div class="back-button">
-        <%= link_to @matchweek.previous, class: "back-link" do %>
+        <%= link_to Matchweek.find(@matchweek.id - 1), class: "back-link" do %>
           <h2><</h2>
         <% end %>
       </div>
       <div class="next-button">
-        <%= link_to @matchweek.next, class: "next-link" do %>
+        <%= link_to Matchweek.find(@matchweek.id + 1), class: "next-link" do %>
           <h2>></h2>
         <% end %>
       </div>

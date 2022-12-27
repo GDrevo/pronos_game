@@ -2,9 +2,10 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @users = User.all.sort_by { |user| -user.total_score }
-    @users = @users.first(100)
-    @new_users = User.last(20).reverse
+    @users = User.where.not(total_score: 0).sort_by { |user| -user.total_score }
+    @users = @users.first(20)
+    @usersmoy = User.where.not(total_score: 0).sort_by { |user| -(user.total_score.to_f / user.bet_number) }
+    @usersmoy = @usersmoy.first(20)
   end
 
   def messenger

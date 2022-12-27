@@ -32,7 +32,11 @@ class BetsController < ApplicationController
         redirect_to league_path(league), notice: "Erreur de format, ex: '2-2', '2 0'... Prono non enregistré."
       end
     else
-      redirect_to league_path(league), notice: "Le match a déjà commencé."
+      if current_user.admin
+        redirect_to edit_match_path(match)
+      else
+        redirect_to league_path(league), notice: "Le match a déjà commencé."
+      end
     end
   end
 
