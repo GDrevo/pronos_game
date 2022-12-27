@@ -1,0 +1,27 @@
+.my-login-container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.form-check-input {
+  border: 1px solid $white;
+}
+
+.form-actions {
+  .btn {
+    background-color: $yellow;
+    color: $black;
+  }
+}
+
+.new_user {
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  .my-login-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
