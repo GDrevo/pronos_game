@@ -38,7 +38,8 @@ class User < ApplicationRecord
   end
 
   def bet_number
-    Bet.where(user_id: self.id).count
+    bet_number = Bet.where(user_id: id)
+    bet_number.where.not(result: "").count
   end
 
   def send_notif_prono(bet)
