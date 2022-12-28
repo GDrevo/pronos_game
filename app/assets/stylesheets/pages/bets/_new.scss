@@ -137,13 +137,21 @@
 
   .bet-team-1 {
     position: absolute;
-    top: 270px;
+    top: 360px;
     left: 0;
+    width: 180px;
+    h3 {
+      font-size: 18px;
+    }
   }
 
   .bet-team-2 {
     position: absolute;
-    top: 270px;
+    top: 360px;
     right: 0;
+    width: 180px;
+    h3 {
+      font-size: 18px;
+    }
   }
 }

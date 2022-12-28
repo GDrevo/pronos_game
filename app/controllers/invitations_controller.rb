@@ -19,6 +19,7 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new
     @user = User.find(user_params)
     @bets = Bet.where(user: @user)
+    @bets_done = @bets.where.not(result: "")
     @won_bets = @bets.where.not(score: 0)
     @perfect_bets = @won_bets.where(score: 10)
     @ranking = @user.ranking + 1

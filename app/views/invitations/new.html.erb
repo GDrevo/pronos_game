@@ -25,7 +25,7 @@
           </div>
           <div class="user-card-row">
             <p>Nombre de paris :</p>
-            <p class="right-stat-user"><%= @bets.count %></p>
+            <p class="right-stat-user"><%= @bets_done.count %></p>
           </div>
           <div class="user-card-row">
             <p>Paris gagnants :</p>
@@ -37,7 +37,7 @@
           </div>
           <div class="user-card-row">
             <p>Moyenne :</p>
-            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></p>
+            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets_done.count.to_f).round(2) unless (@user.total_score.to_f / @bets_done.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets_done.count.to_f).round(2).nan? %></p>
           </div>
           <div class="user-card-row">
             <p>Score total :</p>
@@ -68,7 +68,7 @@
           </div>
           <div class="user-card-row">
             <p>Nombre de paris :</p>
-            <p class="right-stat-user"><%= @bets.count %></p>
+            <p class="right-stat-user"><%= @bets_done.count %></p>
           </div>
           <div class="user-card-row">
             <p>Paris gagnants :</p>
@@ -80,7 +80,7 @@
           </div>
           <div class="user-card-row">
             <p>Moyenne :</p>
-            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></p>
+            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets_done.count.to_f).round(2) unless (@user.total_score.to_f / @bets_done.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets_done.count.to_f).round(2).nan? %></p>
           </div>
           <div class="user-card-row">
             <p>Score total :</p>
@@ -104,7 +104,7 @@
           </div>
           <div class="user-card-row">
             <p>Nombre de paris :</p>
-            <p class="right-stat-user"><%= @bets.count %></p>
+            <p class="right-stat-user"><%= @bets_done.count %></p>
           </div>
           <div class="user-card-row">
             <p>Paris gagnants :</p>
@@ -116,7 +116,7 @@
           </div>
           <div class="user-card-row">
             <p>Moyenne :</p>
-            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets.count.to_f).round(2) unless (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets.count.to_f).round(2).nan? %></p>
+            <p class="right-stat-user"><%= (@user.total_score.to_f / @bets_done.count.to_f).round(2) unless (@user.total_score.to_f / @bets_done.count.to_f).round(2).nan? %> <%= 0 if (@user.total_score.to_f / @bets_done.count.to_f).round(2).nan? %></p>
           </div>
           <div class="user-card-row">
             <p>Score total :</p>
