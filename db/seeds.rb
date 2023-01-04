@@ -1,10 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 
 Notification.destroy_all
 Message.destroy_all
@@ -17,25 +12,6 @@ Matchweek.destroy_all
 Team.destroy_all
 League.destroy_all
 Season.destroy_all
-User.destroy_all
-
-# puts "Creating chatrooms..."
-# Room.create(name: 'ligue 1', is_private: false)
-# Room.create(name: 'Discussions générales', is_private: false)
-# Room.create(name: 'Conseils sur les pronos', is_private: false)
-# puts ">> 3 public chatrooms created !"
-
-puts "Creating Players..."
-gui = User.create(email: 'guillaume.drevo@gmail.com', password: 'PronoApp', username: 'Guillaume', admin: true)
-# ber = User.create(email: 'ber@ber.com', password: 'ber@ber.com', username: 'Bernard')
-
-puts ">> Players created !"
-
-# puts "Creating friendship..."
-
-# Invitation.create(user: gui, friend_id: ber.id, confirmed: true)
-
-# puts "Guillaume and Bernard are now friends !"
 
 puts "Creating a new Season..."
 
