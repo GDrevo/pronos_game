@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
   def update
     match = Match.find(params[:id])
     match.update(match_params)
-    match.played = true
+    match.played = true unless match.result.nil?
     match.save
     all_bets = match.bets
     all_bets.each do |bet|
@@ -25,6 +25,6 @@ class MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:match).permit(:result)
+    params.require(:match).permit(:result, :date, :hour)
   end
 end
