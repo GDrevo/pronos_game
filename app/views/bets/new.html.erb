@@ -73,4 +73,13 @@
       </div>
     </div>
   </div>
+  <% if current_user.admin? %>
+    <div class="admin-card">
+      <%= simple_form_for @match, data: { controller: 'flatpickr' } do |f| %>
+        <%= f.input :date, as: :string, input_html: { data: { flatpickr_target: "date" } } %>
+        <%= f.input :hour %>
+        <%= f.submit "Changer date et heure du match" %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
