@@ -78,6 +78,7 @@
       <%= simple_form_for @match, data: { controller: 'flatpickr' } do |f| %>
         <%= f.input :date, as: :string, input_html: { data: { flatpickr_target: "date" } } %>
         <%= f.input :hour %>
+        <%= f.input :played %>
         <%= f.submit "Changer date et heure du match" %>
       <% end %>
     </div>
