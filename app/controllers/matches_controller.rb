@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
   def update
     match = Match.find(params[:id])
     match.update(match_params)
-    match.played = true unless match.result.nil?
+    match.played = true unless match.result.empty?
     match.save
     all_bets = match.bets
     all_bets.each do |bet|
