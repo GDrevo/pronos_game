@@ -30,15 +30,27 @@ class Bet < ApplicationRecord
 
   def calculate_bet_score
     if @prono_vdn == @result_vdn
-      if ( 3* ((prono.chars[0].to_i - result.chars[0].to_i).abs + (prono.chars[2].to_i - result.chars[2].to_i).abs)) < 10
-        self.score = 10 - ( 3* ((prono.chars[0].to_i - result.chars[0].to_i).abs + (prono.chars[2].to_i - result.chars[2].to_i).abs))
+      if ((prono.chars[0].to_i - result.chars[0].to_i).abs + (prono.chars[2].to_i - result.chars[2].to_i).abs).zero?
+        self.score = 10
       else
-        self.score = 0
+        self.score = 3
       end
     else
       self.score = 0
     end
   end
+
+  # def calculate_bet_score
+  #   if @prono_vdn == @result_vdn
+  #     if ( 3* ((prono.chars[0].to_i - result.chars[0].to_i).abs + (prono.chars[2].to_i - result.chars[2].to_i).abs)) < 10
+  #       self.score = 10 - ( 3* ((prono.chars[0].to_i - result.chars[0].to_i).abs + (prono.chars[2].to_i - result.chars[2].to_i).abs))
+  #     else
+  #       self.score = 0
+  #     end
+  #   else
+  #     self.score = 0
+  #   end
+  # end
 
   def calculate_prono
     prono_h = prono.chars[0].to_i
