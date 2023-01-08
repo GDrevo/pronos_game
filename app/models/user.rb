@@ -43,10 +43,17 @@ class User < ApplicationRecord
   end
 
   def send_notif_prono(bet)
-    notif = Notification.new(user: self)
-    content = "Vous avez gagné #{bet.score} pts grâce à un bon pronostic ! #{bet.match.team_home.name} - #{bet.match.team_away.name}, vous aviez pronostiqué '#{bet.prono}', résultat final : '#{bet.match.result}'"
-    notif.content = content
-    notif.save
+    if bet.score == 0
+      notif = Notification.new(user: self)
+      content = "Malheureusment, vous n'avez pas gagné de point sur votre dernier prono... #{bet.match.team_home.name} - #{bet.match.team_away.name}, vous aviez pronostiqué '#{bet.prono}', résultat final : '#{bet.match.result}'"
+      notif.content = content
+      notif.save
+    else
+      notif = Notification.new(user: self)
+      content = "Vous avez gagné #{bet.score} pts grâce à un bon pronostic ! #{bet.match.team_home.name} - #{bet.match.team_away.name}, vous aviez pronostiqué '#{bet.prono}', résultat final : '#{bet.match.result}'"
+      notif.content = content
+      notif.save
+    end
   end
 
   def send_notif_friend_request(requester)
